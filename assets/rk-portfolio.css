@@ -129,6 +129,9 @@ nav.rk-nav a.nav-hire[aria-current="page"]{box-shadow:0 0 0 2px var(--canvas),0 
   max-width:var(--max);margin:0 auto;padding:32px var(--pad) 24px;
 }
 .hero-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-avatar-col{display:flex;flex-direction:column;align-items:center;flex:0 0 auto}
+.hero-location{display:inline-flex;align-items:center;justify-content:center;gap:5px;font-size:13px;font-weight:500;color:var(--fg-muted);margin:10px 0 0;line-height:1.2}
+.hero-location svg{width:14px;height:14px;flex:0 0 14px}
 .avatar-ring{
   width:160px;height:160px;border-radius:50%;padding:0;
   border:1px solid var(--border);overflow:hidden;flex:0 0 160px;background:var(--canvas-subtle);
