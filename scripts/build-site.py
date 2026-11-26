@@ -74,8 +74,8 @@ def nav_html(current=None) -> str:
         ("skills", "/skills/", "Skills", "code"),
         ("capabilities", "/capabilities/", "Capabilities", "grid"),
         ("business-it", "/business-it/", "Business IT", "building"),
-        ("hire", "/hire/", "Hire", "briefcase"),
         ("resume", "/resume/", "Resume", "document"),
+        ("hire", "/hire/", "Hire", "briefcase"),
     ]
     links = []
     for key, href, label, icon in items:

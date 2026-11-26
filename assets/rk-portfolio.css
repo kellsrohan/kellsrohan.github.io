@@ -97,7 +97,7 @@ nav.rk-nav a svg{width:16px;height:16px;flex:0 0 16px}
 nav.rk-nav a:hover{color:var(--fg);text-decoration:none;border-bottom-color:var(--border)}
 nav.rk-nav a[aria-current="page"]{border-bottom-color:var(--underline);font-weight:600}
 nav.rk-nav a.nav-hire{
-  margin-left:auto;align-self:center;margin-bottom:0;border:0;
+  margin-left:8px;align-self:center;margin-bottom:0;border:0;
   background:var(--success);color:var(--success-fg);
   border-radius:var(--radius);padding:5px 16px;font-weight:500;min-height:var(--control-h);
 }
