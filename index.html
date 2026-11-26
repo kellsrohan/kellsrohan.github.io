@@ -6,7 +6,8 @@
 <title>Rohan Martin Kells — Independent developer in Australia</title>
 <meta name="description" content="Rohan Martin Kells is an independent developer in Australia building self-hosted, zero-dependency web and infrastructure software.">
 <link rel="canonical" href="https://rohankells.com/">
-<meta name="theme-color" content="#080809">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rohan Martin Kells — Independent developer in Australia">
 <meta property="og:description" content="Rohan Martin Kells is an independent developer in Australia building self-hosted, zero-dependency web and infrastructure software.">
@@ -27,7 +28,7 @@
 <script src="/assets/rk-nav.js" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Person","@id":"https://rohankells.com/#person","name":"Rohan Martin Kells","url":"https://rohankells.com/","email":"mailto:support@rohankells.com","jobTitle":"Independent developer","image":"https://rohankells.com/assets/photos/kellsrohan.png","address":{"@type":"PostalAddress","addressCountry":"AU"},"sameAs":["https://github.com/kellsrohan","https://x.com/sitehandle"]},
+  {"@type":"Person","@id":"https://rohankells.com/#person","name":"Rohan Martin Kells","url":"https://rohankells.com/","email":"mailto:support@rohankells.com","jobTitle":"Independent developer","image":"https://rohankells.com/assets/photos/kellsrohan.png","address":{"@type":"PostalAddress","addressCountry":"AU"},"sameAs":["https://github.com/kellsrohan"]},
   {"@type":"WebSite","@id":"https://rohankells.com/#site","name":"Rohan Kells","url":"https://rohankells.com/","inLanguage":"en-AU","publisher":{"@id":"https://rohankells.com/#person"}}
 ]}
 </script>
@@ -39,12 +40,12 @@
 <header class="rk-top">
   <div class="rk-top-in">
     <a class="rk-wordmark" href="/">Rohan <span>Kells</span></a>
-        <nav class="rk-nav" aria-label="Primary">
-      <a href="/#sites">Work</a>
-      <a href="/#skills">Skills</a>
-      <a href="/resume/">Resume</a>
+            <nav class="rk-nav" aria-label="Primary">
+      <a href="/skills/">Skills</a>
+      <a href="/business-it/">Business IT</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
+      <a href="/hire/" class="nav-hire">Hire</a>
     </nav>
     <div class="rk-nav-tools">
       <div data-auth-kit-slot class="ak-slot"></div>
@@ -66,12 +67,32 @@
     <p class="lede">Independent developer in Australia building self-hosted, zero-dependency web and infrastructure software.</p>
     <p class="intro">I design, build and operate web platforms and infrastructure that I can own and maintain. This site is my public professional profile: skills, a short account of the work I do, and a resume you can print.</p>
     <div class="hero-cta">
-      <a class="btn" href="#sites">Public work</a>
-      <a class="btn btn-ghost" href="/resume/">Resume</a>
-      <a class="btn btn-ghost" href="/contact/">Contact</a>
+      <a class="btn" href="/hire/">Hire me</a>
+      <a class="btn btn-ghost" href="/skills/">Skills</a>
+      <a class="btn btn-ghost" href="/business-it/">Business IT</a>
     </div>
   </section>
   <hr class="gold-rule">
+
+  <section class="section" id="engage">
+    <p class="eyebrow">Work with me</p>
+    <h2>How to hire</h2>
+    <p class="sub">Fixed-scope software, small business IT in Australia, and infrastructure work. Availability is stated on the hire page so I do not take on more than I can handle.</p>
+    <div class="blocks">
+      <a class="cap-card" href="/skills/">
+        <h3>Skills</h3>
+        <p>Browse core engineering skills and individual cards, including supporting platforms.</p>
+      </a>
+      <a class="cap-card" href="/business-it/">
+        <h3>Business IT</h3>
+        <p>Email, domains, servers, backups, hardening and support for organisations in Australia.</p>
+      </a>
+      <a class="cap-card" href="/hire/">
+        <h3>Hire</h3>
+        <p>Send a structured enquiry with work type, budget band, timeline and brief.</p>
+      </a>
+    </div>
+  </section>
 
   <section class="section" id="sites">
     <p class="eyebrow">Public work</p>
@@ -128,10 +149,6 @@
         <img src="/assets/favicons/github.svg" width="16" height="16" alt="">
         <span>GitHub: kellsrohan</span>
       </a>
-      <a href="https://x.com/sitehandle" rel="noopener noreferrer">
-        <img src="/assets/favicons/x.png" width="16" height="16" alt="">
-        <span>X: @sitehandle</span>
-      </a>
       <a href="/contact/">
         <img class="site-ico" src="/assets/favicons/rohankells.ico" width="16" height="16" alt="">
         <span>Contact</span>
@@ -143,7 +160,7 @@
     <h2>Skills</h2>
     <p class="sub">The areas I work in, grouped by kind of problem rather than by a single tool.</p>
     <div class="skill-grid"><article class="skill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5h16v14H4z M8 9h8M8 13h5"/></svg><h3>Web development</h3><p>Sites and web applications, from structure and interface through to a live, maintained service.</p></article>
-<article class="skill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16a4 4 0 0 1 .5-8 5 5 0 0 1 9.5 1.5A3.5 3.5 0 0 1 18 16H6z"/></svg><h3>Cloud and Cloudflare</h3><p>Deploying and operating services on Cloudflare, including Workers, Pages, DNS and email routing.</p></article>
+<article class="skill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16a4 4 0 0 1 .5-8 5 5 0 0 1 9.5 1.5A3.5 3.5 0 0 1 18 16H6z"/></svg><h3>Systems and infrastructure</h3><p>Deploying and operating servers, DNS, certificates, mail and monitoring, with self-hosted Linux and Windows at the centre.</p></article>
 <article class="skill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V6 M8 10h8M7 14h10 M5 18h14"/></svg><h3>Networking and IT</h3><p>Practical networking and IT work: connectivity, infrastructure and systems that people rely on day to day.</p></article>
 <article class="skill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V2l14 10L6 22z"/></svg><h3>Telco</h3><p>Telecommunications systems and service delivery, including how networks are set up and supported.</p></article>
 <article class="skill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h3l2-6 4 12 2-6h3"/></svg><h3>Automation</h3><p>Scripts and automated workflows that reduce repetitive work across development and operations.</p></article>
@@ -153,7 +170,9 @@
     <p class="eyebrow">Tools</p>
     <h2>Tech stack</h2>
     <p class="sub">The languages, platforms and practices I use in day-to-day work.</p>
-    <ul class="skills"><li>HTML, CSS and JavaScript</li><li>Python</li><li>Cloudflare Workers and Pages</li><li>DNS and email routing</li><li>Windows and Linux applications</li><li>PayPal checkout</li><li>Automation and scripting</li><li>Interface and brand design</li></ul>
+    <ul class="skills"><li>HTML, CSS and JavaScript</li><li>Python</li><li>Node.js</li><li>SQLite</li><li>DNS and email routing</li><li>Windows and Linux</li><li>Automation and scripting</li><li>Interface and brand design</li></ul>
+    <p class="eyebrow" style="margin-top:20px">Supporting infrastructure tools</p>
+    <ul class="skills support"><li>Cloudflare Workers, Pages and DNS</li><li>Azure</li><li>AWS</li><li>PayPal checkout</li></ul>
   </section>
   <section class="section" id="experience">
     <p class="eyebrow">Background</p>
@@ -245,12 +264,13 @@
       <div>
         <p class="brand-f" style="font-size:1rem">Site</p>
         <ul>
+          <li><a href="/skills/">Skills</a></li>
+          <li><a href="/capabilities/">Capabilities</a></li>
+          <li><a href="/business-it/">Business IT</a></li>
+          <li><a href="/hire/">Hire</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#skills">Skills</a></li>
           <li><a href="/resume/">Resume</a></li>
-          <li><a href="/services/">Services</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="/products/">Products</a></li>
         </ul>
       </div>
       <div>
@@ -268,7 +288,6 @@
       <p>&copy; 2026 Rohan Kells. Australia.</p>
       <nav aria-label="Social and legal">
         <a href="https://github.com/kellsrohan" rel="noopener noreferrer">GitHub</a>
-        <a href="https://x.com/sitehandle" rel="noopener noreferrer">X</a>
         <a href="/products/">Products</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
