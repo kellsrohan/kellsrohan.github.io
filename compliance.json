@@ -1,9 +1,9 @@
 {
   "version": "1.0",
-  "status": "template",
+  "status": "site",
   "chosenAt": null,
   "chosenBy": null,
-  "dashboardNote": "not yet chosen",
+  "dashboardNote": null,
   "operator": {
     "legalName": "Rohan Kells",
     "entityType": "sole_trader",
@@ -12,7 +12,7 @@
     "acn": null
   },
   "abn": {
-    "mode": "template",
+    "mode": "site",
     "value": null,
     "formatted": null,
     "verified": false,
@@ -21,39 +21,38 @@
   },
   "gstRegistered": false,
   "privacy": {
-    "mode": "template",
+    "mode": "site",
     "source": {
-      "type": "template",
+      "type": "site",
       "path": null,
       "text": null
     },
     "lastUpdated": "2026-11-24"
   },
   "terms": {
-    "mode": "template",
+    "mode": "site",
     "source": {
-      "type": "template",
+      "type": "site",
       "path": null,
       "text": null
     },
     "lastUpdated": "2026-11-24"
   },
   "pricingDisclaimer": {
-    "mode": "template",
+    "mode": "site",
     "source": {
-      "type": "template",
+      "type": "site",
       "path": null,
       "text": null
     }
   },
   "emailCompliance": {
-    "mode": "template",
+    "mode": "site",
     "doubleOptIn": true,
     "senderIdentification": true,
     "oneClickUnsubscribe": true,
     "preferenceCentre": true,
     "noPreTickedConsent": true
   },
-  "region": "Central Coast",
   "notes": "ABN is not published on rohankells.com."
 }

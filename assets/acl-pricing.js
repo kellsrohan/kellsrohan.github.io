@@ -1,5 +1,5 @@
 /* ACL pricing helper: total is prominent, GST statement, estimates labelled, no drip pricing.
-   Template, review with a lawyer before relying on it. */
+   Legal draft — review with a lawyer before relying on it. */
 (function () {
   var GST = "Not registered for GST, so no GST is charged.";
   var ACL = "Our services come with guarantees that cannot be excluded under the Australian Consumer Law.";

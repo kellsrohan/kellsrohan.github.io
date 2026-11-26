@@ -323,7 +323,7 @@
     if (isSearch(f) || f.classList.contains('mp-card')) return;
     f.classList.add('mp-card');
     if (f.querySelector('.step [data-ms-next], [data-ms-next]') || f.querySelector('fieldset.step')) { f.classList.add('mp-own-steps'); return; }
-    var kids = [].slice.call(f.children).filter(function (k) { return !(k.tagName === 'INPUT' && k.type === 'hidden') && !k.hasAttribute('hidden') && !k.matches('.form-msg,.form-status,[role=status],[aria-live],script,template'); });
+    var kids = [].slice.call(f.children).filter(function (k) { return !(k.tagName === 'INPUT' && k.type === 'hidden') && !k.hasAttribute('hidden') && !k.matches('.form-msg,.form-status,[role=status],[aria-live],script'); });
     var subEl = kids.filter(function (k) { return k.matches('[type=submit],button:not([type])') || k.querySelector('[type=submit],button:not([type])'); }).pop();
     var groups = kids.filter(function (k) { return k !== subEl; });
     if (!groups.length) return;

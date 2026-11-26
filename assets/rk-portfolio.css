@@ -367,3 +367,23 @@ form.cf .consent input{width:auto;margin-top:4px}
   .timeline li:before{background:#C9A36A;box-shadow:none}
   .skills li{border-color:#C9A36A;color:#111}
 }
+
+
+/* Social links with cached real favicons */
+.social-links{
+  display:flex;flex-wrap:wrap;gap:12px;margin:0;padding:0;
+}
+.social-links a{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--surface);border:1px solid var(--line);
+  color:var(--text);text-decoration:none;
+  padding:12px 16px;min-height:44px;
+}
+.social-links a:hover{border-color:var(--line-strong);color:var(--gold-2)}
+.social-links img{
+  width:16px;height:16px;flex:0 0 16px;object-fit:contain;
+  background:#fff;border-radius:2px;
+}
+.card .logo img.favicon{
+  width:32px;height:32px;object-fit:contain;background:#fff;border-radius:6px;padding:4px;
+}
