@@ -20,9 +20,11 @@
 <meta name="twitter:title" content="Backend &amp; Data — Skills — Rohan Kells">
 <meta name="twitter:description" content="Backend &amp; Data: Services, storage, sign-in and the everyday data work that keeps a product running.">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+<link rel="icon" href="/favicon-32.png?v=2" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png?v=2" sizes="16x16" type="image/png">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/rk-portfolio.css">
 <script src="/assets/rk-nav.js" defer></script>
 <script src="/assets/rk-skills-search.js" defer></script>
@@ -32,12 +34,21 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="page-bg" aria-hidden="true"></div>
 <div class="wrap">
 <header class="rk-top">
   <div class="rk-top-in">
-    <a class="rk-wordmark" href="/"><img src="/favicon.svg" width="16" height="16" alt="">Rohan <span>Kells</span></a>
+    <a class="rk-wordmark" href="/"><img src="/favicon.svg?v=2" width="16" height="16" alt="">Rohan <span>Kells</span></a>
     <nav class="rk-nav" aria-label="Primary">
-      <a href="/skills/" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>Skills</a>
+      <div class="rk-dd">
+        <a href="/skills/" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>Skills</a>
+        <ul class="rk-dd-menu" aria-label="Skill groups">
+        <li><a href="/skills/web-and-app-engineering/">Web &amp; App Engineering</a></li>
+        <li><a href="/skills/backend-and-data/">Backend &amp; Data</a></li>
+        <li><a href="/skills/infrastructure/">Infrastructure &amp; Self-Hosting</a></li>
+        <li><a href="/skills/protocols-commerce-crypto/">Protocols, Commerce &amp; Crypto</a></li>
+        </ul>
+      </div>
       <a href="/capabilities/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>Capabilities</a>
       <a href="/business-it/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V6l8-3 8 3v14H4zM9 20v-6h6v6M9 9h.01M15 9h.01M12 9h.01"/></svg>Business IT</a>
       <a href="/resume/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M10 13h6M10 17h4"/></svg>Resume</a>
@@ -49,6 +60,36 @@
     </div>
   </div>
 </header>
+<div class="rk-body">
+<aside class="rk-side">
+  <details class="rk-side-panel">
+    <summary class="rk-side-toggle">Site menu</summary>
+    <nav class="rk-side-nav" aria-label="Site">
+      <p class="rk-side-label">Profile</p>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/background/">Background</a>
+      <a href="/resume/">Resume</a>
+      <a href="/approach/">Approach</a>
+      <p class="rk-side-label">Work &amp; Skills</p>
+      <a href="/skills/" aria-current="page">Skills</a>
+      <a href="/capabilities/">Capabilities</a>
+      <a href="/services/">Services</a>
+      <a href="/business-it/">Business IT</a>
+      <a href="/locations/">Locations</a>
+      <a href="/projects/">Projects</a>
+      <a href="/tools/">Tools</a>
+      <p class="rk-side-label">Resources &amp; Contact</p>
+      <a href="/hire/">Hire</a>
+      <a href="/contact/">Contact</a>
+      <a href="/search/">Search</a>
+      <a href="/resources/">Resources</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/status/">Status</a>
+    </nav>
+  </details>
+</aside>
+<div class="rk-content">
 <main id="main">
   <header class="page-hero">
     <p class="eyebrow"><a href="/skills/">Skills</a> / Backend &amp; Data</p>
@@ -65,7 +106,24 @@
       <p class="search-count" data-search-count></p>
       <p data-empty>No skills or cards match that search.</p>
     </div>
-    <div class="grid">
+    <div class="grid rk-panel-scroll">
+      <a class="card repo-card" data-skill-item data-name="Python" data-keywords="python scripting automation backend data" data-category="Backend &amp; Data" href="/skills/backend-and-data/python/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/python.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Python</strong>
+          <span>Python for scripting, automation, data work and backend services.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Java" data-keywords="java jvm application development backend" data-category="Backend &amp; Data" href="/skills/backend-and-data/java/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/java.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Java</strong>
+          <span class="skill-level">Working</span>
+          <span>Java for application work and supporting tools alongside Python and JavaScript.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Node.js standard library" data-keywords="node stdlib http fs" data-category="Backend &amp; Data" href="/skills/backend-and-data/nodejs-stdlib/">
         <span class="logo"><img class="favicon" src="/assets/favicons/nodejs.png" width="16" height="16" alt=""></span>
         <span class="meta">
@@ -79,6 +137,42 @@
         <span class="meta">
           <strong>SQLite</strong>
           <span>Embedded SQL storage for applications that should stay self-hosted.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="PostgreSQL" data-keywords="postgresql postgres sql relational database schema backups" data-category="Backend &amp; Data" href="/skills/backend-and-data/postgresql/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/postgresql.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>PostgreSQL</strong>
+          <span class="skill-level">Working</span>
+          <span>PostgreSQL for application data: schema, queries, backups and routine operation of the database.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="MySQL / MariaDB" data-keywords="mysql mariadb sql relational database schema backups" data-category="Backend &amp; Data" href="/skills/backend-and-data/mysql-mariadb/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/mysql.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>MySQL / MariaDB</strong>
+          <span class="skill-level">Working</span>
+          <span>MySQL and MariaDB for application data, including schema, queries, backups and day-to-day operation.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="JSON" data-keywords="json apis data interchange configuration records" data-category="Backend &amp; Data" href="/skills/backend-and-data/json/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5c-2 0-3 1.5-3 3v2c0 1-1 1.5-2 2 1 .5 2 1 2 2v2c0 1.5 1 3 3 3M15 5c2 0 3 1.5 3 3v2c0 1 1 1.5 2 2-1 .5-2 1-2 2v2c0 1.5-1 3-3 3"/></svg></span>
+        <span class="meta">
+          <strong>JSON</strong>
+          <span class="skill-level">Advanced</span>
+          <span>JSON for APIs, configuration, data interchange and structured records.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="CRM" data-keywords="crm customer records enquiries follow-up integrations" data-category="Backend &amp; Data" href="/skills/backend-and-data/crm/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span>
+        <span class="meta">
+          <strong>CRM</strong>
+          <span class="skill-level">Working</span>
+          <span>Customer and enquiry records, structured follow-up, and integrations around a CRM workflow.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -114,6 +208,15 @@
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Data Scraping &amp; Web Automation" data-keywords="data scraping web automation crawling collection scripts authorised" data-category="Backend &amp; Data" href="/skills/backend-and-data/data-scraping/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3M9 12h6M9 16h4"/></svg></span>
+        <span class="meta">
+          <strong>Data Scraping &amp; Web Automation</strong>
+          <span class="skill-level">Working</span>
+          <span>Authorised data scraping and web automation for repeatable collection, checks and operational scripts.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Ollama" data-keywords="ollama local ai models" data-category="Backend &amp; Data" href="/skills/backend-and-data/ollama/">
         <span class="logo"><img class="favicon" src="/assets/favicons/ollama.png" width="16" height="16" alt=""></span>
         <span class="meta">
@@ -123,13 +226,13 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
     </div>
-    <p style="margin-top:24px"><a class="btn" href="/hire/">Hire me</a> <a class="btn btn-ghost" href="/skills/">All skills</a></p>
+    <p class="section-links"><a class="btn" href="/hire/">Hire me</a> <a class="btn btn-ghost" href="/skills/">All skills</a></p>
   </section>
 </main>
 <footer class="rk-foot">
   <div class="rk-foot-in">
     <div class="rk-legal">
-      <p>&copy; 2026 Rohan Kells. Australia. <a href="mailto:support@rohankells.com">support@rohankells.com</a></p>
+      <p>&copy; 2026 Rohan Kells. Australia. <a class="mail-ico" href="mailto:support@rohankells.com" aria-label="Email support@rohankells.com" title="support@rohankells.com"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></p>
       <p class="updated">Last updated: 27 November 2026</p>
       <nav aria-label="Site and legal">
         <a href="/skills/">Skills</a>
@@ -149,6 +252,8 @@
     </div>
   </div>
 </footer>
+</div>
+</div>
 </div>
 </body>
 </html>

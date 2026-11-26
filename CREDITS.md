@@ -1,18 +1,20 @@
 # Credits — rohankells.com
 
-Updated 26 Nov 2026 (AEDT).
+Updated 27 November 2026 (Australia/Sydney).
 
 ## Photo
 
-- Portrait of Rohan Kells on the homepage and About page: /assets/photos/kellsrohan.png. Photograph supplied by Rohan Kells.
-- Earlier USDA / Flickr files under /assets/photos/hero-*.webp and /assets/photos/og.jpg remain on disk from a previous version of the site and are not used on the current pages.
+- Portrait of Rohan Kells on the home page and About page: /assets/photos/kellsrohan.png. Photograph supplied by Rohan Kells.
 
 ## Fonts
 
-- ibm-plex-sans — SIL Open Font License 1.1, self-hosted from the Fontsource variable build. Licence text: /assets/fonts/ibm-plex-sans-OFL.txt
-- source-serif-4 — SIL Open Font License 1.1, self-hosted from the Fontsource variable build. Licence text: /assets/fonts/source-serif-4-OFL.txt
+- The site uses the system interface stack (Apple system fonts, Segoe UI, Noto Sans, Helvetica, Arial and generic sans-serif). No third-party font files are loaded.
 
 ## Icons
 
-- Thin-line icon set in the style of Lucide/Feather (ISC / MIT licences), drawn inline as SVG.
-- Platform tiles on the portfolio grid are each site's own logo or app icon, copied for display on this directory.
+- Thin-line icons drawn inline as SVG, in the style of Lucide and Feather (ISC / MIT licences).
+- Platform marks on skill cards are each service's official favicon, stored locally under /assets/favicons/.
+
+## Maps
+
+- The Australia map on the home page is an OpenStreetMap embed. Map data © OpenStreetMap contributors, https://www.openstreetmap.org/copyright.

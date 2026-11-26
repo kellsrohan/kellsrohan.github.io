@@ -1,1 +1,29 @@
-document.querySelectorAll('form.cf').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var m=f.querySelector('.form-msg');if(!f.checkValidity()){f.reportValidity();m.className='form-msg err';m.textContent='Please complete the required fields.';return}m.className='form-msg';m.textContent='Sending…';fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new URLSearchParams(new FormData(f))}).then(function(r){if(!r.ok)throw 0;m.className='form-msg ok';m.textContent='Thanks — your message was received.';f.reset()}).catch(function(){m.className='form-msg err';m.textContent='Sorry, the message could not be sent. Please email us instead.'})})});(function(){var b=document.querySelector('.theme-toggle');if(!b)return;b.addEventListener('click',function(){var d=document.documentElement,n=d.getAttribute('data-scheme')==='dark'?'light':'dark';d.setAttribute('data-scheme',n);try{localStorage.setItem('theme',n)}catch(e){}})})();
+(function(){
+  document.querySelectorAll("form.cf").forEach(function(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      if(form.website_hp && form.website_hp.value) return;
+      var msg=form.querySelector(".form-msg, [data-form-msg]");
+      if(!form.checkValidity()){
+        form.reportValidity();
+        if(msg) msg.textContent="Please complete every required field.";
+        return;
+      }
+      var kind=(form.getAttribute("data-form")|| (form.querySelector("[name=type]") && form.querySelector("[name=type]").value) || "enquiry");
+      var subject="Rohan Kells — "+kind;
+      var lines=[];
+      var fd=new FormData(form);
+      fd.forEach(function(value, key){
+        if(key==="website_hp"||key==="consent") return;
+        if(!String(value).trim()) return;
+        lines.push(key+": "+value);
+      });
+      if(!lines.length){
+        if(msg) msg.textContent="Please complete every required field.";
+        return;
+      }
+      if(msg) msg.textContent="Your mail application will open with a structured message to support@rohankells.com. There is no form server.";
+      window.location.href="mailto:support@rohankells.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\r\n"));
+    });
+  });
+})();

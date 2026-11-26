@@ -20,9 +20,11 @@
 <meta name="twitter:title" content="Infrastructure &amp; Self-Hosting — Skills — Rohan Kells">
 <meta name="twitter:description" content="Infrastructure &amp; Self-Hosting: Servers, DNS, certificates, mail and the operations work that keeps systems online.">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+<link rel="icon" href="/favicon-32.png?v=2" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png?v=2" sizes="16x16" type="image/png">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/rk-portfolio.css">
 <script src="/assets/rk-nav.js" defer></script>
 <script src="/assets/rk-skills-search.js" defer></script>
@@ -32,12 +34,21 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="page-bg" aria-hidden="true"></div>
 <div class="wrap">
 <header class="rk-top">
   <div class="rk-top-in">
-    <a class="rk-wordmark" href="/"><img src="/favicon.svg" width="16" height="16" alt="">Rohan <span>Kells</span></a>
+    <a class="rk-wordmark" href="/"><img src="/favicon.svg?v=2" width="16" height="16" alt="">Rohan <span>Kells</span></a>
     <nav class="rk-nav" aria-label="Primary">
-      <a href="/skills/" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>Skills</a>
+      <div class="rk-dd">
+        <a href="/skills/" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>Skills</a>
+        <ul class="rk-dd-menu" aria-label="Skill groups">
+        <li><a href="/skills/web-and-app-engineering/">Web &amp; App Engineering</a></li>
+        <li><a href="/skills/backend-and-data/">Backend &amp; Data</a></li>
+        <li><a href="/skills/infrastructure/">Infrastructure &amp; Self-Hosting</a></li>
+        <li><a href="/skills/protocols-commerce-crypto/">Protocols, Commerce &amp; Crypto</a></li>
+        </ul>
+      </div>
       <a href="/capabilities/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>Capabilities</a>
       <a href="/business-it/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V6l8-3 8 3v14H4zM9 20v-6h6v6M9 9h.01M15 9h.01M12 9h.01"/></svg>Business IT</a>
       <a href="/resume/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M10 13h6M10 17h4"/></svg>Resume</a>
@@ -49,6 +60,36 @@
     </div>
   </div>
 </header>
+<div class="rk-body">
+<aside class="rk-side">
+  <details class="rk-side-panel">
+    <summary class="rk-side-toggle">Site menu</summary>
+    <nav class="rk-side-nav" aria-label="Site">
+      <p class="rk-side-label">Profile</p>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/background/">Background</a>
+      <a href="/resume/">Resume</a>
+      <a href="/approach/">Approach</a>
+      <p class="rk-side-label">Work &amp; Skills</p>
+      <a href="/skills/" aria-current="page">Skills</a>
+      <a href="/capabilities/">Capabilities</a>
+      <a href="/services/">Services</a>
+      <a href="/business-it/">Business IT</a>
+      <a href="/locations/">Locations</a>
+      <a href="/projects/">Projects</a>
+      <a href="/tools/">Tools</a>
+      <p class="rk-side-label">Resources &amp; Contact</p>
+      <a href="/hire/">Hire</a>
+      <a href="/contact/">Contact</a>
+      <a href="/search/">Search</a>
+      <a href="/resources/">Resources</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/status/">Status</a>
+    </nav>
+  </details>
+</aside>
+<div class="rk-content">
 <main id="main">
   <header class="page-hero">
     <p class="eyebrow"><a href="/skills/">Skills</a> / Infrastructure &amp; Self-Hosting</p>
@@ -65,7 +106,7 @@
       <p class="search-count" data-search-count></p>
       <p data-empty>No skills or cards match that search.</p>
     </div>
-    <div class="grid">
+    <div class="grid rk-panel-scroll">
       <a class="card repo-card" data-skill-item data-name="Linux servers" data-keywords="linux server ssh systemd" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/linux/">
         <span class="logo"><img class="favicon" src="/assets/favicons/linux.png" width="16" height="16" alt=""></span>
         <span class="meta">
@@ -82,11 +123,28 @@
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Ubuntu" data-keywords="ubuntu linux apt servers lts" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/ubuntu/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/ubuntu.png" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Ubuntu</strong>
+          <span>Ubuntu servers: install, updates and day-to-day operations on Ubuntu Linux.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Docker" data-keywords="docker containers compose" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/docker/">
         <span class="logo"><img class="favicon" src="/assets/favicons/docker.ico" width="16" height="16" alt=""></span>
         <span class="meta">
           <strong>Docker</strong>
           <span>Container images, Compose files and local Docker workflows.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="cPanel" data-keywords="cpanel whm hosting accounts email dns server administration" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/cpanel/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/cpanel.png" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>cPanel</strong>
+          <span class="skill-level">Working</span>
+          <span>cPanel and WHM for hosting accounts, email, DNS and routine server administration.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -114,6 +172,60 @@
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Computer Builds" data-keywords="computer builds workstations desktops hardware pcs" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/computer-builds/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="12" height="10" rx="1"/><rect x="16" y="10" width="5" height="8" rx="1"/></svg></span>
+        <span class="meta">
+          <strong>Computer Builds</strong>
+          <span class="skill-level">Working</span>
+          <span>Specifying and assembling desktop and workstation builds for development and small business use.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Computer Repairs" data-keywords="computer repairs diagnostics workstations hardware recovery" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/computer-repairs/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-4M18 4v4h-4M20 12a8 8 0 0 1-14 4M6 20v-4h4"/></svg></span>
+        <span class="meta">
+          <strong>Computer Repairs</strong>
+          <span class="skill-level">Working</span>
+          <span>Diagnosis and repair of workstations and desktops, including hardware faults and operating system recovery.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Business IT" data-keywords="business it small business it workstations email domains backups support" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/business-it/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V6l8-3 8 3v14H4zM9 20v-6h6v6M9 9h.01M15 9h.01M12 9h.01"/></svg></span>
+        <span class="meta">
+          <strong>Business IT</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Day-to-day small business IT in Australia: workstations, email, domains, backups and support.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Xero" data-keywords="xero bookkeeping invoicing accounting small business integrations" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/xero/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/xero.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Xero</strong>
+          <span class="skill-level">Working</span>
+          <span>Xero setup and supporting integrations for small-business bookkeeping and invoicing in Australia.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Microsoft 365" data-keywords="microsoft 365 office 365 exchange sharepoint onedrive business email" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/microsoft-365/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/microsoft-365.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Microsoft 365</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Microsoft 365 setup and support for mail, files and everyday business productivity in Australia.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Google Workspace" data-keywords="google workspace gmail google drive workspace admin business email" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/google-workspace/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/google-workspace.png" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Google Workspace</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Google Workspace for business email, calendars, Drive and Workspace admin in Australia.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Windows Automation" data-keywords="powershell scheduled tasks automation workstation" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/windows-automation/">
         <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3M9 12h6M9 16h4"/></svg></span>
         <span class="meta">
@@ -138,11 +250,29 @@
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
-      <a class="card repo-card" data-skill-item data-name="DNS" data-keywords="dns domains records nameservers" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/dns/">
+      <a class="card repo-card" data-skill-item data-name="DNS" data-keywords="dns domains domain management records nameservers dnssec registration transfers renewal whois spf dkim dmarc" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/dns/">
         <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span>
         <span class="meta">
           <strong>DNS</strong>
-          <span>Domain records, routing and mail-related DNS for live services.</span>
+          <span class="skill-level">Advanced</span>
+          <span>Domain registration, nameservers, DNS records, DNSSEC, renewal and WHOIS, and mail-related DNS including SPF, DKIM and DMARC.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Networking Fundamentals" data-keywords="ipv4 ipv6 subnetting routing cidr vlan networking firewall" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/networking-fundamentals/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span>
+        <span class="meta">
+          <strong>Networking Fundamentals</strong>
+          <span>IPv4, IPv6, subnetting, routing and core networking concepts used in day-to-day infrastructure work.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="VPN" data-keywords="vpn virtual private network remote access wireguard tunnel secure access" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/vpn/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+        <span class="meta">
+          <strong>VPN</strong>
+          <span class="skill-level">Working</span>
+          <span>Virtual private networks for secure remote access to business systems and internal services.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -151,6 +281,15 @@
         <span class="meta">
           <strong>TLS and ACME</strong>
           <span>Certificates and HTTPS for public sites and services.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Email Deliverability" data-keywords="email deliverability spf dkim dmarc mail authentication inbox" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/email-deliverability/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg></span>
+        <span class="meta">
+          <strong>Email Deliverability</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Email deliverability with SPF, DKIM and DMARC so business mail is authenticated and more likely to arrive.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -178,6 +317,33 @@
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Cybersecurity &amp; Server Hardening" data-keywords="cybersecurity server hardening firewalls access control updates linux windows" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/cybersecurity-hardening/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span>
+        <span class="meta">
+          <strong>Cybersecurity &amp; Server Hardening</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Cybersecurity and server hardening for Linux and Windows hosts: access, updates, firewalls and baseline configuration.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Incident Response" data-keywords="incident response security incident containment investigation outage recovery" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/incident-response/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span>
+        <span class="meta">
+          <strong>Incident Response</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Incident response for web and infrastructure issues: containment, investigation and a clear path back to a working service.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Disaster Recovery" data-keywords="disaster recovery backups restore continuity recovery planning servers" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/disaster-recovery/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v3H4zM6 10v9h12v-9M10 13h4"/></svg></span>
+        <span class="meta">
+          <strong>Disaster Recovery</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Disaster recovery planning and restore rehearsals for servers, mail and web services, including backups you can actually use.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Cloudflare" data-keywords="cloudflare workers pages cdn dns" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/cloudflare/">
         <span class="logo"><img class="favicon" src="/assets/favicons/cloudflare.png" width="16" height="16" alt=""></span>
         <span class="meta">
@@ -191,6 +357,15 @@
         <span class="meta">
           <strong>Cloudflare Proxying</strong>
           <span>DNS routing, proxying, TLS, and edge caching.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Cloudflare Tunnels &amp; Zero Trust" data-keywords="cloudflare tunnels zero trust cloudflare access tunnel internal services" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/cloudflare-tunnels/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/cloudflare.png" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Cloudflare Tunnels &amp; Zero Trust</strong>
+          <span class="skill-level">Advanced</span>
+          <span>Cloudflare Tunnels and Zero Trust to publish and protect internal services without opening inbound ports.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -210,14 +385,22 @@
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Google Cloud" data-keywords="google cloud gcp cloud compute storage" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/google-cloud/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/google-cloud.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Google Cloud</strong>
+          <span>Google Cloud as a supporting platform for compute, storage, networking and developer services.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
     </div>
-    <p style="margin-top:24px"><a class="btn" href="/hire/">Hire me</a> <a class="btn btn-ghost" href="/skills/">All skills</a></p>
+    <p class="section-links"><a class="btn" href="/hire/">Hire me</a> <a class="btn btn-ghost" href="/skills/">All skills</a></p>
   </section>
 </main>
 <footer class="rk-foot">
   <div class="rk-foot-in">
     <div class="rk-legal">
-      <p>&copy; 2026 Rohan Kells. Australia. <a href="mailto:support@rohankells.com">support@rohankells.com</a></p>
+      <p>&copy; 2026 Rohan Kells. Australia. <a class="mail-ico" href="mailto:support@rohankells.com" aria-label="Email support@rohankells.com" title="support@rohankells.com"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></p>
       <p class="updated">Last updated: 27 November 2026</p>
       <nav aria-label="Site and legal">
         <a href="/skills/">Skills</a>
@@ -237,6 +420,8 @@
     </div>
   </div>
 </footer>
+</div>
+</div>
 </div>
 </body>
 </html>

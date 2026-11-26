@@ -75,6 +75,26 @@
           "icon": "braces"
         },
         {
+          "slug": "typescript",
+          "name": "TypeScript",
+          "level": "Working",
+          "summary": "TypeScript for typed JavaScript in web applications and supporting tools.",
+          "keywords": [
+            "typescript",
+            "typed javascript",
+            "javascript",
+            "web applications",
+            "types"
+          ],
+          "what": "I use TypeScript when a web application or supporting tool benefits from typed JavaScript: clearer interfaces, safer refactors, and a compile step that still ships ordinary JavaScript to the browser or to Node.js.",
+          "related": [
+            "javascript",
+            "nodejs",
+            "html"
+          ],
+          "favicon": "typescript"
+        },
+        {
           "slug": "apps-script",
           "name": "Apps Script",
           "summary": "Google Apps Script automation for Google Sheets, Gmail, Drive, triggers, and Workspace tools.",
@@ -95,6 +115,30 @@
             "html"
           ],
           "favicon": "apps-script"
+        },
+        {
+          "slug": "google-developer",
+          "name": "Google Developer",
+          "summary": "Google Developer tools including Search Console, Tag Manager, Analytics, Workspace APIs and the web developer platform.",
+          "keywords": [
+            "google developer",
+            "search console",
+            "tag manager",
+            "analytics",
+            "ga4",
+            "adsense",
+            "apps script",
+            "workspace apis"
+          ],
+          "what": "I use Google Search Console, Google Tag Manager, GA4, AdSense, Apps Script and Google Workspace Developer APIs when a site or workspace needs search visibility, measurement, advertising or automation on Google's platform.",
+          "related": [
+            "apps-script",
+            "javascript",
+            "html",
+            "embedding"
+          ],
+          "favicon": "google",
+          "level": "Advanced"
         },
         {
           "slug": "nodejs",
@@ -135,6 +179,27 @@
           "icon": "devices"
         },
         {
+          "slug": "embedding",
+          "name": "Embedding",
+          "summary": "Iframe embeds, map embeds, widget integration and third-party content embedding in web pages.",
+          "keywords": [
+            "iframe",
+            "embeds",
+            "map embeds",
+            "widget integration",
+            "third-party content",
+            "sandbox"
+          ],
+          "what": "I embed maps, widgets and other outside content in pages using sandboxed iframes, with responsive sizing and careful limits so third-party content stays contained and does not take over the page.",
+          "related": [
+            "html",
+            "css",
+            "javascript",
+            "responsive-ui"
+          ],
+          "level": "Advanced"
+        },
+        {
           "slug": "zero-dependency-apps",
           "name": "Zero-dependency web apps",
           "summary": "Self-contained applications that do not require a heavy package tree.",
@@ -170,6 +235,69 @@
             "javascript"
           ],
           "icon": "sitemap"
+        },
+        {
+          "slug": "website-migrations",
+          "name": "Website Migrations & Speed Optimisation",
+          "level": "Working",
+          "summary": "Website migrations and speed optimisation: moving a site cleanly and tightening the pages that people actually load.",
+          "keywords": [
+            "website migrations",
+            "speed optimisation",
+            "performance",
+            "cutover",
+            "core web",
+            "hosting move"
+          ],
+          "what": "I migrate websites from one host or stack to another with a written cutover plan, and I tighten page weight, caching and image use so the pages people load are quicker without changing the meaning of the site.",
+          "related": [
+            "html",
+            "css",
+            "javascript",
+            "wordpress",
+            "dns"
+          ],
+          "icon": "swap"
+        },
+        {
+          "slug": "seo",
+          "name": "SEO",
+          "level": "Working",
+          "summary": "Search engine optimisation for public websites: titles, metadata, structure and Search Console.",
+          "keywords": [
+            "seo",
+            "search engine optimisation",
+            "metadata",
+            "search console",
+            "indexing"
+          ],
+          "what": "I set up the on-site foundations of search engine optimisation: unique titles and descriptions, clear headings, canonical URLs, a sitemap, and Google Search Console where a site needs to be found.",
+          "related": [
+            "google-developer",
+            "html"
+          ],
+          "icon": "search"
+        },
+        {
+          "slug": "digital-marketing",
+          "name": "Digital Marketing",
+          "level": "Working",
+          "summary": "Practical digital marketing for public sites: measurement, search, and on-site conversion paths.",
+          "keywords": [
+            "digital marketing",
+            "measurement",
+            "analytics",
+            "search",
+            "conversion",
+            "web"
+          ],
+          "what": "I support digital marketing work on the sites I build: measurement through Google Tag Manager and GA4, search foundations, and clear conversion paths such as hire and contact pages.",
+          "related": [
+            "seo",
+            "social-media-marketing",
+            "google-developer"
+          ],
+          "icon": "activity"
         },
         {
           "slug": "wordpress",
@@ -242,6 +370,45 @@
       "icon": "database",
       "cards": [
         {
+          "slug": "python",
+          "name": "Python",
+          "summary": "Python for scripting, automation, data work and backend services.",
+          "keywords": [
+            "python",
+            "scripting",
+            "automation",
+            "backend",
+            "data"
+          ],
+          "what": "I use Python for scripting, automation, data work and backend services, including the supporting tools around packaging, files and routine operational tasks.",
+          "related": [
+            "csv-pdf",
+            "automated-backups",
+            "sqlite",
+            "automation"
+          ],
+          "favicon": "python"
+        },
+        {
+          "slug": "java",
+          "name": "Java",
+          "level": "Working",
+          "summary": "Java for application work and supporting tools alongside Python and JavaScript.",
+          "keywords": [
+            "java",
+            "jvm",
+            "application development",
+            "backend"
+          ],
+          "what": "I use Java for application work and supporting tools when a project already lives on the JVM or is a better fit than Python or JavaScript for that piece of work.",
+          "related": [
+            "python",
+            "javascript",
+            "json"
+          ],
+          "favicon": "java"
+        },
+        {
           "slug": "nodejs-stdlib",
           "name": "Node.js standard library",
           "summary": "HTTP, file and process work using the Node.js standard library.",
@@ -277,6 +444,92 @@
             "automated-backups",
             "csv-pdf"
           ]
+        },
+        {
+          "slug": "postgresql",
+          "name": "PostgreSQL",
+          "level": "Working",
+          "summary": "PostgreSQL for application data: schema, queries, backups and routine operation of the database.",
+          "keywords": [
+            "postgresql",
+            "postgres",
+            "sql",
+            "relational database",
+            "schema",
+            "backups"
+          ],
+          "what": "I use PostgreSQL for application data when a project needs a relational database: schema and queries, access, backups and the routine operation that keeps the database healthy beside the application it serves.",
+          "related": [
+            "mysql-mariadb",
+            "sqlite",
+            "automated-backups",
+            "python"
+          ],
+          "favicon": "postgresql"
+        },
+        {
+          "slug": "mysql-mariadb",
+          "name": "MySQL / MariaDB",
+          "level": "Working",
+          "summary": "MySQL and MariaDB for application data, including schema, queries, backups and day-to-day operation.",
+          "keywords": [
+            "mysql",
+            "mariadb",
+            "sql",
+            "relational database",
+            "schema",
+            "backups"
+          ],
+          "what": "I work with MySQL and MariaDB for application data: schema and queries, access, backups and day-to-day operation, including sites and applications that already run on those engines.",
+          "related": [
+            "postgresql",
+            "sqlite",
+            "wordpress",
+            "automated-backups"
+          ],
+          "favicon": "mysql"
+        },
+        {
+          "slug": "json",
+          "name": "JSON",
+          "level": "Advanced",
+          "summary": "JSON for APIs, configuration, data interchange and structured records.",
+          "keywords": [
+            "json",
+            "apis",
+            "data interchange",
+            "configuration",
+            "records"
+          ],
+          "what": "I use JSON throughout API work, configuration and data interchange: request and response bodies, structured records, and the documents that scripts and web services pass between each other.",
+          "related": [
+            "rest",
+            "rpc",
+            "javascript",
+            "python"
+          ],
+          "icon": "braces"
+        },
+        {
+          "slug": "crm",
+          "name": "CRM",
+          "level": "Working",
+          "summary": "Customer and enquiry records, structured follow-up, and integrations around a CRM workflow.",
+          "keywords": [
+            "crm",
+            "customer records",
+            "enquiries",
+            "follow-up",
+            "integrations"
+          ],
+          "what": "I set up and integrate CRM workflows for enquiries and customer records: structured intake, follow-up, and the surrounding email or webhook connections a small organisation actually uses.",
+          "related": [
+            "webhooks",
+            "csv-pdf",
+            "authentication",
+            "digital-marketing"
+          ],
+          "icon": "person"
         },
         {
           "slug": "authentication",
@@ -346,6 +599,28 @@
             "nodejs-stdlib"
           ],
           "icon": "document"
+        },
+        {
+          "slug": "data-scraping",
+          "name": "Data Scraping & Web Automation",
+          "level": "Working",
+          "summary": "Authorised data scraping and web automation for repeatable collection, checks and operational scripts.",
+          "keywords": [
+            "data scraping",
+            "web automation",
+            "crawling",
+            "collection",
+            "scripts",
+            "authorised"
+          ],
+          "what": "I write authorised data collection and web automation for work I have been asked to do: repeatable scripts that gather, check and file information, with clear limits so the automation stays maintainable and respectful of the systems it touches.",
+          "related": [
+            "python",
+            "javascript",
+            "csv-pdf",
+            "automated-backups"
+          ],
+          "icon": "script"
         },
         {
           "slug": "ollama",
@@ -421,6 +696,26 @@
           "favicon": "debian"
         },
         {
+          "slug": "ubuntu",
+          "name": "Ubuntu",
+          "summary": "Ubuntu servers: install, updates and day-to-day operations on Ubuntu Linux.",
+          "keywords": [
+            "ubuntu",
+            "linux",
+            "apt",
+            "servers",
+            "lts"
+          ],
+          "what": "I install, update and operate Ubuntu servers for web applications and services, including packages, users and the routine work that keeps a host healthy.",
+          "related": [
+            "linux",
+            "debian",
+            "docker",
+            "dns"
+          ],
+          "favicon": "ubuntu"
+        },
+        {
           "slug": "docker",
           "name": "Docker",
           "summary": "Container images, Compose files and local Docker workflows.",
@@ -436,6 +731,28 @@
             "reverse-proxies"
           ],
           "favicon": "docker"
+        },
+        {
+          "slug": "cpanel",
+          "name": "cPanel",
+          "level": "Working",
+          "summary": "cPanel and WHM for hosting accounts, email, DNS and routine server administration.",
+          "keywords": [
+            "cpanel",
+            "whm",
+            "hosting accounts",
+            "email",
+            "dns",
+            "server administration"
+          ],
+          "what": "I work with cPanel and WHM to administer hosting accounts, email, DNS and the routine server tasks a small organisation needs, including backups and access for the people who use the accounts.",
+          "related": [
+            "linux",
+            "dns",
+            "mail-servers",
+            "tls-acme"
+          ],
+          "favicon": "cpanel"
         },
         {
           "slug": "vmware",
@@ -498,6 +815,134 @@
           ]
         },
         {
+          "slug": "computer-builds",
+          "name": "Computer Builds",
+          "level": "Working",
+          "summary": "Specifying and assembling desktop and workstation builds for development and small business use.",
+          "keywords": [
+            "computer builds",
+            "workstations",
+            "desktops",
+            "hardware",
+            "pcs"
+          ],
+          "what": "I specify and assemble desktop and workstation builds for development and small-business use, then install the operating system and the baseline software needed to put the machine to work.",
+          "related": [
+            "computer-repairs",
+            "windows-desktop",
+            "linux",
+            "business-it"
+          ],
+          "icon": "devices"
+        },
+        {
+          "slug": "computer-repairs",
+          "name": "Computer Repairs",
+          "level": "Working",
+          "summary": "Diagnosis and repair of workstations and desktops, including hardware faults and operating system recovery.",
+          "keywords": [
+            "computer repairs",
+            "diagnostics",
+            "workstations",
+            "hardware",
+            "recovery"
+          ],
+          "what": "I diagnose and repair workstations and desktops: failing drives, memory, power and operating system recovery, with the aim of restoring a machine people can actually work on.",
+          "related": [
+            "computer-builds",
+            "windows-desktop",
+            "windows-servers",
+            "automated-backups"
+          ],
+          "icon": "cycle"
+        },
+        {
+          "slug": "business-it",
+          "name": "Business IT",
+          "level": "Advanced",
+          "summary": "Day-to-day small business IT in Australia: workstations, email, domains, backups and support.",
+          "keywords": [
+            "business it",
+            "small business it",
+            "workstations",
+            "email",
+            "domains",
+            "backups",
+            "support"
+          ],
+          "what": "I look after the practical IT a small organisation in Australia needs: workstations, business email, domains, backups and routine support, with a written scope and systems that can be maintained afterwards.",
+          "related": [
+            "mail-servers",
+            "windows-desktop",
+            "automated-backups"
+          ],
+          "icon": "building"
+        },
+        {
+          "slug": "xero",
+          "name": "Xero",
+          "level": "Working",
+          "summary": "Xero setup and supporting integrations for small-business bookkeeping and invoicing in Australia.",
+          "keywords": [
+            "xero",
+            "bookkeeping",
+            "invoicing",
+            "accounting",
+            "small business",
+            "integrations"
+          ],
+          "what": "I help small organisations in Australia get Xero in place and connected to the surrounding tools they already use, including users, invoicing workflows and the integrations a bookkeeping routine depends on.",
+          "related": [
+            "business-it",
+            "csv-pdf",
+            "webhooks"
+          ],
+          "favicon": "xero"
+        },
+        {
+          "slug": "microsoft-365",
+          "name": "Microsoft 365",
+          "level": "Advanced",
+          "summary": "Microsoft 365 setup and support for mail, files and everyday business productivity in Australia.",
+          "keywords": [
+            "microsoft 365",
+            "office 365",
+            "exchange",
+            "sharepoint",
+            "onedrive",
+            "business email"
+          ],
+          "what": "I set up and support Microsoft 365 for small organisations: mailboxes, domains, file libraries and the everyday productivity tools a team actually uses, with a clean cutover when moving from another mail host.",
+          "related": [
+            "mail-servers",
+            "dns",
+            "windows-desktop",
+            "google-workspace"
+          ],
+          "favicon": "microsoft-365"
+        },
+        {
+          "slug": "google-workspace",
+          "name": "Google Workspace",
+          "level": "Advanced",
+          "summary": "Google Workspace for business email, calendars, Drive and Workspace admin in Australia.",
+          "keywords": [
+            "google workspace",
+            "gmail",
+            "google drive",
+            "workspace admin",
+            "business email"
+          ],
+          "what": "I set up and administer Google Workspace for organisations that want business email, calendars and Drive on their own domain, including DNS and mail authentication for a clean cutover.",
+          "related": [
+            "microsoft-365",
+            "dns",
+            "mail-servers",
+            "google-developer"
+          ],
+          "favicon": "google-workspace"
+        },
+        {
           "slug": "windows-automation",
           "name": "Windows Automation",
           "summary": "PowerShell scripting, scheduled tasks, and workstation automation.",
@@ -558,20 +1003,76 @@
         {
           "slug": "dns",
           "name": "DNS",
-          "summary": "Domain records, routing and mail-related DNS for live services.",
+          "summary": "Domain registration, nameservers, DNS records, DNSSEC, renewal and WHOIS, and mail-related DNS including SPF, DKIM and DMARC.",
           "keywords": [
             "dns",
             "domains",
+            "domain management",
             "records",
-            "nameservers"
+            "nameservers",
+            "dnssec",
+            "registration",
+            "transfers",
+            "renewal",
+            "whois",
+            "spf",
+            "dkim",
+            "dmarc"
           ],
-          "what": "I plan and maintain DNS for websites and mail: A, AAAA, CNAME, MX and TXT records, including SPF, DKIM and DMARC, with changes made carefully.",
+          "what": "I plan and maintain DNS and domain management for websites and mail: registration, transfers, nameservers, renewal and WHOIS, DNSSEC, and A, AAAA, CNAME, MX and TXT records including SPF, DKIM and DMARC, with changes made carefully.",
           "related": [
             "tls-acme",
             "mail-servers",
-            "linux"
+            "linux",
+            "email-deliverability"
+          ],
+          "icon": "globe",
+          "level": "Advanced"
+        },
+        {
+          "slug": "networking-fundamentals",
+          "name": "Networking Fundamentals",
+          "summary": "IPv4, IPv6, subnetting, routing and core networking concepts used in day-to-day infrastructure work.",
+          "keywords": [
+            "ipv4",
+            "ipv6",
+            "subnetting",
+            "routing",
+            "cidr",
+            "vlan",
+            "networking",
+            "firewall"
+          ],
+          "what": "I work with IPv4 and IPv6 addressing, CIDR subnetting, VLANs, routing and firewalling, and I troubleshoot network issues when services need a clear path to the internet or to each other.",
+          "related": [
+            "linux",
+            "dns",
+            "windows-servers",
+            "uptime-monitoring"
           ],
           "icon": "globe"
+        },
+        {
+          "slug": "vpn",
+          "name": "VPN",
+          "level": "Working",
+          "summary": "Virtual private networks for secure remote access to business systems and internal services.",
+          "keywords": [
+            "vpn",
+            "virtual private network",
+            "remote access",
+            "wireguard",
+            "tunnel",
+            "secure access"
+          ],
+          "what": "I set up and support virtual private networks so people can reach business systems and internal services securely from outside the office, with access limited to the hosts and users who need it.",
+          "related": [
+            "networking-fundamentals",
+            "linux",
+            "windows-servers",
+            "cloudflare-tunnels"
+          ],
+          "icon": "lock"
         },
         {
           "slug": "tls-acme",
@@ -591,6 +1092,28 @@
             "linux"
           ],
           "icon": "lock"
+        },
+        {
+          "slug": "email-deliverability",
+          "name": "Email Deliverability",
+          "level": "Advanced",
+          "summary": "Email deliverability with SPF, DKIM and DMARC so business mail is authenticated and more likely to arrive.",
+          "keywords": [
+            "email deliverability",
+            "spf",
+            "dkim",
+            "dmarc",
+            "mail authentication",
+            "inbox"
+          ],
+          "what": "I improve email deliverability by setting SPF, DKIM and DMARC correctly on a domain, checking alignment, and tracing why messages bounce or land in junk, so business mail is authenticated and more likely to arrive.",
+          "related": [
+            "mail-servers",
+            "dns",
+            "microsoft-365",
+            "google-workspace"
+          ],
+          "icon": "mail"
         },
         {
           "slug": "mail-servers",
@@ -650,6 +1173,73 @@
           "icon": "activity"
         },
         {
+          "slug": "cybersecurity-hardening",
+          "name": "Cybersecurity & Server Hardening",
+          "level": "Advanced",
+          "summary": "Cybersecurity and server hardening for Linux and Windows hosts: access, updates, firewalls and baseline configuration.",
+          "keywords": [
+            "cybersecurity",
+            "server hardening",
+            "firewalls",
+            "access control",
+            "updates",
+            "linux",
+            "windows"
+          ],
+          "what": "I harden Linux and Windows servers used for web and business services: users and access, updates, firewalls, and a baseline configuration that reduces the obvious ways a host gets abused, then keep that baseline maintainable.",
+          "related": [
+            "linux",
+            "windows-servers",
+            "incident-response",
+            "tls-acme"
+          ],
+          "icon": "shield"
+        },
+        {
+          "slug": "incident-response",
+          "name": "Incident Response",
+          "level": "Advanced",
+          "summary": "Incident response for web and infrastructure issues: containment, investigation and a clear path back to a working service.",
+          "keywords": [
+            "incident response",
+            "security incident",
+            "containment",
+            "investigation",
+            "outage",
+            "recovery"
+          ],
+          "what": "I respond to incidents on systems I operate or have been asked to look after: contain the issue, investigate what happened, restore a working service, and write down the steps so the same failure is less likely to repeat.",
+          "related": [
+            "disaster-recovery",
+            "cybersecurity-hardening",
+            "uptime-monitoring",
+            "linux"
+          ],
+          "icon": "activity"
+        },
+        {
+          "slug": "disaster-recovery",
+          "name": "Disaster Recovery",
+          "level": "Advanced",
+          "summary": "Disaster recovery planning and restore rehearsals for servers, mail and web services, including backups you can actually use.",
+          "keywords": [
+            "disaster recovery",
+            "backups",
+            "restore",
+            "continuity",
+            "recovery planning",
+            "servers"
+          ],
+          "what": "I plan disaster recovery for servers, mail and web services: backups with retention you can restore from, a written restore path, and rehearsals so recovery is not a theory when a host or site fails.",
+          "related": [
+            "incident-response",
+            "automated-backups",
+            "linux",
+            "mail-servers"
+          ],
+          "icon": "archive"
+        },
+        {
           "slug": "cloudflare",
           "name": "Cloudflare",
           "summary": "Workers, Pages and DNS as supporting infrastructure tools.",
@@ -691,6 +1281,28 @@
           ]
         },
         {
+          "slug": "cloudflare-tunnels",
+          "name": "Cloudflare Tunnels & Zero Trust",
+          "level": "Advanced",
+          "summary": "Cloudflare Tunnels and Zero Trust to publish and protect internal services without opening inbound ports.",
+          "keywords": [
+            "cloudflare tunnels",
+            "zero trust",
+            "cloudflare",
+            "access",
+            "tunnel",
+            "internal services"
+          ],
+          "what": "I set up Cloudflare Tunnels and Zero Trust access so internal services can be reached safely without opening inbound ports on the origin, including access policies for the people who need those services.",
+          "related": [
+            "cloudflare",
+            "cloudflare-proxying",
+            "vpn",
+            "dns"
+          ],
+          "favicon": "cloudflare"
+        },
+        {
           "slug": "azure",
           "name": "Azure",
           "summary": "Microsoft Azure as a supporting cloud for compute, storage and networking.",
@@ -728,6 +1340,26 @@
             "linux",
             "dns"
           ]
+        },
+        {
+          "slug": "google-cloud",
+          "name": "Google Cloud",
+          "summary": "Google Cloud as a supporting platform for compute, storage, networking and developer services.",
+          "keywords": [
+            "google cloud",
+            "gcp",
+            "cloud",
+            "compute",
+            "storage"
+          ],
+          "what": "I work with Google Cloud when a project already lives there or needs Google cloud services, as a supporting platform next to self-hosted infrastructure.",
+          "related": [
+            "aws",
+            "azure",
+            "cloudflare",
+            "linux"
+          ],
+          "favicon": "google-cloud"
         }
       ]
     },
@@ -872,6 +1504,68 @@
           "icon": "checkout"
         },
         {
+          "slug": "stripe",
+          "name": "Stripe",
+          "summary": "Stripe checkout, subscriptions and payment webhooks for digital products and web platforms.",
+          "keywords": [
+            "stripe",
+            "payments",
+            "checkout",
+            "subscriptions",
+            "cards"
+          ],
+          "what": "I implement Stripe checkout and subscription flows, including webhooks, receipts and the operational pages a buyer needs after paying.",
+          "related": [
+            "paypal",
+            "fiat-checkout",
+            "webhooks",
+            "shopify"
+          ],
+          "favicon": "stripe"
+        },
+        {
+          "slug": "paypal",
+          "name": "PayPal",
+          "summary": "PayPal checkout for digital products, including receipts and post-purchase delivery.",
+          "keywords": [
+            "paypal",
+            "payments",
+            "checkout",
+            "receipts",
+            "digital products"
+          ],
+          "what": "I implement PayPal checkout on product pages, with receipts from PayPal and delivery details sent to the email used at checkout.",
+          "related": [
+            "stripe",
+            "fiat-checkout",
+            "webhooks",
+            "shopify"
+          ],
+          "favicon": "paypal"
+        },
+        {
+          "slug": "square",
+          "name": "Square",
+          "level": "Working",
+          "summary": "Square checkout and payments for in-person and online sales, including receipts and settlements.",
+          "keywords": [
+            "square",
+            "payments",
+            "checkout",
+            "point of sale",
+            "receipts",
+            "settlements"
+          ],
+          "what": "I implement Square payments for in-person and online sales, including checkout, receipts and the settlement flow a small organisation needs after a payment is taken.",
+          "related": [
+            "paypal",
+            "stripe",
+            "fiat-checkout",
+            "shopify"
+          ],
+          "favicon": "square"
+        },
+        {
           "slug": "shopify",
           "name": "Shopify",
           "summary": "Shopify storefronts, themes, custom apps, checkout flows, and store integrations.",
@@ -891,6 +1585,69 @@
             "html"
           ],
           "favicon": "shopify"
+        },
+        {
+          "slug": "woocommerce",
+          "name": "WooCommerce",
+          "level": "Working",
+          "summary": "WooCommerce storefronts on WordPress, including catalogue, checkout and payment integrations.",
+          "keywords": [
+            "woocommerce",
+            "wordpress",
+            "storefront",
+            "checkout",
+            "catalogue",
+            "payments"
+          ],
+          "what": "I build and maintain WooCommerce storefronts on WordPress: catalogue, checkout, payment integrations and the surrounding pages a buyer needs after paying.",
+          "related": [
+            "wordpress",
+            "storefront",
+            "paypal",
+            "stripe"
+          ],
+          "favicon": "woocommerce"
+        },
+        {
+          "slug": "storefront",
+          "name": "Storefront",
+          "level": "Working",
+          "summary": "Storefronts for digital products and retail, including Shopify and custom checkout pages.",
+          "keywords": [
+            "storefront",
+            "shopify",
+            "commerce",
+            "digital products",
+            "checkout"
+          ],
+          "what": "I build and adapt storefronts for digital products and retail, including Shopify storefronts and custom product pages with PayPal or Stripe checkout and email delivery.",
+          "related": [
+            "shopify",
+            "paypal",
+            "stripe"
+          ],
+          "icon": "checkout"
+        },
+        {
+          "slug": "social-media-marketing",
+          "name": "Social Media Marketing",
+          "level": "Advanced",
+          "summary": "Social media marketing for a professional practice: public profiles, consistent messaging, and links back to the site.",
+          "keywords": [
+            "social media marketing",
+            "social media",
+            "public profiles",
+            "messaging",
+            "audience",
+            "content"
+          ],
+          "what": "I plan and keep social media marketing for a professional practice: a public profile, consistent messaging, and links back to the site so enquiries land on hire or contact pages rather than in a closed inbox alone.",
+          "related": [
+            "digital-marketing",
+            "seo",
+            "storefront"
+          ],
+          "icon": "pulse"
         },
         {
           "slug": "crypto-wallets",
