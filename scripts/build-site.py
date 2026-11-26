@@ -951,12 +951,7 @@ LOCATION_BLOCK = (
     "      <p class=\"hero-location\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" fill=\"none\" "
     "stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\">"
     "<path d=\"M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z\"/>"
-    "<circle cx=\"12\" cy=\"11\" r=\"2.2\"/></svg>Australia</p>\n"
-    "      <div class=\"hero-map\">\n"
-    "        <iframe title=\"Map of Australia\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" "
-    "src=\"https://www.openstreetmap.org/export/embed.html?bbox=112.0%2C-44.5%2C154.0%2C-9.5&amp;layer=mapnik\"></iframe>\n"
-    "      </div>\n"
-    "      <p class=\"hero-map-credit\">Map data &copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>. <a href=\"/locations/\">Locations across Australia</a></p>\n"
+    "<circle cx=\"12\" cy=\"11\" r=\"2.2\"/></svg><span>Australia</span> &middot; <a href=\"/locations/\">Locations across Australia</a></p>\n"
     "    </div>"
 )
 
@@ -972,20 +967,13 @@ HOME_SEARCH = """    <form class="site-search hero-search" data-site-search data
 
 
 def _ensure_home_hero(t_home: str) -> str:
-    """Keep a minimal homepage: photo, name, standalone Australia block with map, lede, key links and inline search."""
+    """Keep a minimal homepage: photo, name, clean Australia location line, lede, key links and inline search."""
     t_home = t_home.replace('width="70" height="70"', 'width="160" height="160"')
-    if 'class="hero-location-block"' in t_home and "openstreetmap.org/export/embed.html" in t_home:
-        if 'href="/locations/"' not in t_home.split('hero-location-block', 1)[-1].split("</div>", 2)[0] + t_home[t_home.find("hero-map-credit"):t_home.find("hero-map-credit")+400]:
-            t_home = t_home.replace(
-                '<p class="hero-map-credit">Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></p>',
-                '<p class="hero-map-credit">Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>. <a href="/locations/">Locations across Australia</a></p>',
-                1,
-            )
-    else:
-        t_home = re.sub(r"\s*<p class=\"hero-location\">.*?</p>", "", t_home, flags=re.S)
-        needle = "        <h1>Rohan Martin Kells</h1>\n      </div>\n    </div>"
-        if needle in t_home:
-            t_home = t_home.replace(needle, needle + "\n" + LOCATION_BLOCK, 1)
+    t_home = re.sub(r"\s*<div class=\"hero-location-block\">.*?</div>\s*(?=\n\s*<p class=\"lede\">)", "", t_home, flags=re.S)
+    t_home = re.sub(r"\s*<p class=\"hero-location\">.*?</p>", "", t_home, flags=re.S)
+    needle = "        <h1>Rohan Martin Kells</h1>\n      </div>\n    </div>"
+    if needle in t_home:
+        t_home = t_home.replace(needle, needle + "\n" + LOCATION_BLOCK, 1)
     if "data-inline-search" not in t_home:
         if re.search(r'<ul class="hero-key-links">.*?</ul>', t_home, flags=re.S):
             t_home = re.sub(
