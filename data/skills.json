@@ -5,66 +5,203 @@
       "slug": "web-and-app-engineering",
       "name": "Web & App Engineering",
       "summary": "Sites and web applications, from structure and interface through to a live, maintained service.",
-      "keywords": ["web", "app", "html", "css", "javascript", "node", "ui", "ux", "frontend"],
+      "keywords": [
+        "web",
+        "app",
+        "html",
+        "css",
+        "javascript",
+        "node",
+        "ui",
+        "ux",
+        "frontend"
+      ],
       "icon": "code",
       "cards": [
         {
           "slug": "html",
           "name": "HTML",
           "summary": "Semantic document structure for accessible, crawlable web interfaces.",
-          "keywords": ["markup", "semantic", "accessibility", "seo"],
+          "keywords": [
+            "markup",
+            "semantic",
+            "accessibility",
+            "seo"
+          ],
           "what": "I write clear, semantic HTML so pages are readable, accessible, and straightforward to maintain — including multi-page sites and single-page application shells.",
-          "related": ["css", "javascript", "responsive-ui", "zero-dependency-apps"]
+          "related": [
+            "css",
+            "javascript",
+            "responsive-ui",
+            "zero-dependency-apps"
+          ],
+          "icon": "markup"
         },
         {
           "slug": "css",
           "name": "CSS",
           "summary": "Layout, typography and responsive styling without a heavy framework.",
-          "keywords": ["layout", "responsive", "design", "styles"],
+          "keywords": [
+            "layout",
+            "responsive",
+            "design",
+            "styles"
+          ],
           "what": "I style interfaces with plain CSS: compact spacing, clear hierarchy, and layouts that hold up on phones, tablets and desktops without pulling in a UI kit.",
-          "related": ["html", "responsive-ui", "zero-dependency-apps"]
+          "related": [
+            "html",
+            "responsive-ui",
+            "zero-dependency-apps"
+          ],
+          "icon": "palette"
         },
         {
           "slug": "javascript",
           "name": "JavaScript",
           "summary": "Browser and server JavaScript for interactive interfaces and tooling.",
-          "keywords": ["js", "browser", "client", "vanilla"],
+          "keywords": [
+            "js",
+            "browser",
+            "client",
+            "vanilla"
+          ],
           "what": "I use JavaScript directly in the browser and on the server for forms, search, real-time updates and small applications — without a required frontend framework.",
-          "related": ["html", "nodejs", "zero-dependency-apps", "websockets"]
+          "related": [
+            "html",
+            "nodejs",
+            "zero-dependency-apps",
+            "websockets"
+          ],
+          "icon": "braces"
         },
         {
           "slug": "nodejs",
           "name": "Node.js",
           "summary": "JavaScript on the server for web apps, APIs and local tooling.",
-          "keywords": ["node", "server", "javascript", "runtime"],
+          "keywords": [
+            "node",
+            "server",
+            "javascript",
+            "runtime"
+          ],
           "favicon": "nodejs",
-          "favicon_source": "https://nodejs.org/static/images/favicons/favicon.png",
           "what": "I build web services and command-line tools on Node.js, including zero-dependency apps that stay on the standard library where that is practical.",
-          "related": ["javascript", "nodejs-stdlib", "rest", "zero-dependency-apps"]
+          "related": [
+            "javascript",
+            "nodejs-stdlib",
+            "rest",
+            "zero-dependency-apps"
+          ]
         },
         {
           "slug": "responsive-ui",
           "name": "Responsive UI and UX",
           "summary": "Interfaces that stay usable across phone, tablet and desktop.",
-          "keywords": ["ui", "ux", "mobile", "responsive", "design"],
+          "keywords": [
+            "ui",
+            "ux",
+            "mobile",
+            "responsive",
+            "design"
+          ],
           "what": "I design and implement interfaces with compact controls, clear focus states and layouts that work at small sizes first, then scale up cleanly.",
-          "related": ["html", "css", "javascript"]
+          "related": [
+            "html",
+            "css",
+            "javascript"
+          ],
+          "icon": "devices"
         },
         {
           "slug": "zero-dependency-apps",
           "name": "Zero-dependency web apps",
           "summary": "Self-contained applications that do not require a heavy package tree.",
-          "keywords": ["zero-dependency", "self-hosted", "static", "vanilla"],
+          "keywords": [
+            "zero-dependency",
+            "self-hosted",
+            "static",
+            "vanilla"
+          ],
           "what": "I ship self-hosted web apps that run with little or no third-party runtime, so the stack stays understandable, portable and under your control.",
-          "related": ["html", "javascript", "nodejs-stdlib", "site-architecture"]
+          "related": [
+            "html",
+            "javascript",
+            "nodejs-stdlib",
+            "site-architecture"
+          ],
+          "icon": "box"
         },
         {
           "slug": "site-architecture",
           "name": "Single-page and multi-site architecture",
           "summary": "Information architecture for one site, or a set of sites that share patterns.",
-          "keywords": ["architecture", "multi-site", "spa", "ia"],
+          "keywords": [
+            "architecture",
+            "multi-site",
+            "spa",
+            "ia"
+          ],
           "what": "I plan page structure, routing and shared chrome for a single application or a group of related sites, so navigation and content stay consistent as the work grows.",
-          "related": ["html", "zero-dependency-apps", "javascript"]
+          "related": [
+            "html",
+            "zero-dependency-apps",
+            "javascript"
+          ],
+          "icon": "sitemap"
+        },
+        {
+          "slug": "wordpress",
+          "name": "WordPress",
+          "summary": "Self-hosted WordPress sites, themes, and plugin work.",
+          "keywords": [
+            "wordpress",
+            "cms",
+            "themes",
+            "plugins"
+          ],
+          "what": "I set up and look after self-hosted WordPress sites: clear structure, themes and plugins, and the routine work that keeps a site running.",
+          "related": [
+            "html",
+            "css",
+            "javascript",
+            "site-architecture"
+          ],
+          "favicon": "wordpress"
+        },
+        {
+          "slug": "visual-studio",
+          "name": "Visual Studio",
+          "summary": "Building and debugging software with Visual Studio.",
+          "keywords": [
+            "visual studio",
+            "ide",
+            "windows",
+            "debugging"
+          ],
+          "what": "I use Visual Studio to write, build and debug software, including Windows-focused work, with a clear project structure and a maintainable toolchain.",
+          "related": [
+            "windows-desktop",
+            "windows-automation",
+            "github"
+          ],
+          "favicon": "visualstudio"
+        },
+        {
+          "slug": "github",
+          "name": "GitHub",
+          "summary": "Public source control, issues and releases on GitHub.",
+          "keywords": [
+            "github",
+            "git",
+            "source control",
+            "releases"
+          ],
+          "what": "I use GitHub for public source control, issues and releases. Private repositories are not listed or linked on this site.",
+          "related": [
+            "site-architecture",
+            "zero-dependency-apps"
+          ],
+          "favicon": "github"
         }
       ]
     },
@@ -72,59 +209,138 @@
       "slug": "backend-and-data",
       "name": "Backend & Data",
       "summary": "Services, storage, sign-in and the everyday data work that keeps a product running.",
-      "keywords": ["backend", "data", "api", "sqlite", "auth", "security"],
+      "keywords": [
+        "backend",
+        "data",
+        "api",
+        "sqlite",
+        "auth",
+        "security"
+      ],
       "icon": "database",
       "cards": [
         {
           "slug": "nodejs-stdlib",
           "name": "Node.js standard library",
           "summary": "HTTP, file and process work using the Node.js standard library.",
-          "keywords": ["node", "stdlib", "http", "fs"],
+          "keywords": [
+            "node",
+            "stdlib",
+            "http",
+            "fs"
+          ],
           "favicon": "nodejs",
           "what": "Where it is practical, I keep server code on the Node.js standard library — HTTP services, file I/O and processes — so deployments stay small and easy to reason about.",
-          "related": ["nodejs", "sqlite", "rest", "zero-dependency-apps"]
+          "related": [
+            "nodejs",
+            "sqlite",
+            "rest",
+            "zero-dependency-apps"
+          ]
         },
         {
           "slug": "sqlite",
           "name": "SQLite",
           "summary": "Embedded SQL storage for applications that should stay self-hosted.",
-          "keywords": ["sql", "database", "storage", "sqlite"],
+          "keywords": [
+            "sql",
+            "database",
+            "storage",
+            "sqlite"
+          ],
           "favicon": "sqlite",
-          "favicon_source": "https://www.sqlite.org/favicon.ico",
           "what": "I use SQLite for application data when a self-hosted, file-based database is the right fit: simple backups, clear schema, and no separate database server to operate.",
-          "related": ["nodejs-stdlib", "automated-backups", "csv-pdf"]
+          "related": [
+            "nodejs-stdlib",
+            "automated-backups",
+            "csv-pdf"
+          ]
         },
         {
           "slug": "authentication",
           "name": "Authentication",
           "summary": "Sign-in, accounts and credential handling for web applications.",
-          "keywords": ["auth", "login", "accounts", "identity"],
+          "keywords": [
+            "auth",
+            "login",
+            "accounts",
+            "identity"
+          ],
           "what": "I implement sign-in and account flows with careful handling of credentials, recovery and access control, suited to the scale of the application.",
-          "related": ["session-security", "nodejs-stdlib"]
+          "related": [
+            "session-security",
+            "nodejs-stdlib"
+          ],
+          "icon": "key"
         },
         {
           "slug": "session-security",
           "name": "Session security",
           "summary": "Session cookies, expiry and protection against common session attacks.",
-          "keywords": ["sessions", "cookies", "csrf", "security"],
+          "keywords": [
+            "sessions",
+            "cookies",
+            "csrf",
+            "security"
+          ],
           "what": "I set up session handling with secure cookies, sensible expiry and defences against session fixation and cross-site request issues.",
-          "related": ["authentication", "nodejs-stdlib"]
+          "related": [
+            "authentication",
+            "nodejs-stdlib"
+          ],
+          "icon": "shield"
         },
         {
           "slug": "automated-backups",
           "name": "Automated backups",
           "summary": "Scheduled copies of application data and configuration.",
-          "keywords": ["backup", "restore", "retention", "operations"],
+          "keywords": [
+            "backup",
+            "restore",
+            "retention",
+            "operations"
+          ],
           "what": "I put automated backups in place for databases, files and configuration, with retention that can actually be restored from.",
-          "related": ["sqlite", "linux", "windows-servers"]
+          "related": [
+            "sqlite",
+            "linux",
+            "windows-servers"
+          ],
+          "icon": "archive"
         },
         {
           "slug": "csv-pdf",
           "name": "CSV and PDF generation",
           "summary": "Export of reports and records as CSV or PDF files.",
-          "keywords": ["csv", "pdf", "export", "reports"],
+          "keywords": [
+            "csv",
+            "pdf",
+            "export",
+            "reports"
+          ],
           "what": "I generate CSV and PDF output from application data for records, invoices and operational reports, without a bulky reporting suite.",
-          "related": ["sqlite", "nodejs-stdlib"]
+          "related": [
+            "sqlite",
+            "nodejs-stdlib"
+          ],
+          "icon": "document"
+        },
+        {
+          "slug": "ollama",
+          "name": "Ollama",
+          "summary": "Running and managing local AI models.",
+          "keywords": [
+            "ollama",
+            "local ai",
+            "models"
+          ],
+          "what": "I run and manage local AI models with Ollama: installing models, keeping them up to date, and wiring them into local tooling when a self-hosted setup is the right fit.",
+          "related": [
+            "linux",
+            "docker",
+            "automated-backups"
+          ],
+          "favicon": "ollama"
         }
       ]
     },
@@ -132,94 +348,321 @@
       "slug": "infrastructure",
       "name": "Infrastructure & Self-Hosting",
       "summary": "Servers, DNS, certificates, mail and the operations work that keeps systems online.",
-      "keywords": ["infrastructure", "servers", "linux", "windows", "dns", "tls", "hosting", "self-hosted"],
+      "keywords": [
+        "infrastructure",
+        "servers",
+        "linux",
+        "windows",
+        "dns",
+        "tls",
+        "hosting",
+        "self-hosted"
+      ],
       "icon": "server",
       "cards": [
         {
           "slug": "linux",
           "name": "Linux servers",
           "summary": "Provisioning, hardening and day-to-day operation of Linux hosts.",
-          "keywords": ["linux", "server", "ssh", "systemd"],
+          "keywords": [
+            "linux",
+            "server",
+            "ssh",
+            "systemd"
+          ],
           "what": "I set up and operate Linux servers for web applications and services: users, firewalls, process management, and the routine work that keeps a host healthy.",
-          "related": ["windows-servers", "reverse-proxies", "dns", "uptime-monitoring"]
+          "related": [
+            "windows-servers",
+            "reverse-proxies",
+            "dns",
+            "uptime-monitoring"
+          ],
+          "favicon": "linux"
+        },
+        {
+          "slug": "debian",
+          "name": "Debian",
+          "summary": "Debian servers: install, hardening and day-to-day operations.",
+          "keywords": [
+            "debian",
+            "linux",
+            "apt",
+            "servers"
+          ],
+          "what": "I install, harden and operate Debian servers for web applications and services, including updates, users and the routine work that keeps a host healthy.",
+          "related": [
+            "linux",
+            "docker",
+            "dns",
+            "uptime-monitoring"
+          ],
+          "favicon": "debian"
+        },
+        {
+          "slug": "docker",
+          "name": "Docker",
+          "summary": "Container images, Compose files and local Docker workflows.",
+          "keywords": [
+            "docker",
+            "containers",
+            "compose"
+          ],
+          "what": "I build and run container images and Compose files for local and server workflows, so services start the same way from one host to the next.",
+          "related": [
+            "linux",
+            "debian",
+            "reverse-proxies"
+          ],
+          "favicon": "docker"
         },
         {
           "slug": "windows-servers",
           "name": "Windows servers",
           "summary": "Windows hosts for business applications, file services and local networks.",
-          "keywords": ["windows", "server", "active directory", "smb"],
+          "keywords": [
+            "windows",
+            "server",
+            "active directory",
+            "smb"
+          ],
           "what": "I work with Windows servers in small business settings — applications, file services and the surrounding network — alongside Linux where both are in use.",
-          "related": ["linux", "dns", "automated-backups"]
+          "related": [
+            "linux",
+            "dns",
+            "automated-backups",
+            "windows-desktop",
+            "windows-automation"
+          ],
+          "favicon": "windows"
+        },
+        {
+          "slug": "windows-desktop",
+          "name": "Windows desktop",
+          "summary": "Windows desktop setup, administration, troubleshooting and tooling.",
+          "keywords": [
+            "windows",
+            "desktop",
+            "workstation",
+            "administration",
+            "troubleshooting"
+          ],
+          "favicon": "windows",
+          "what": "I set up and look after Windows desktop systems: installation, administration, troubleshooting and the everyday tooling that keeps workstations usable in a small business or workshop setting.",
+          "related": [
+            "windows-servers",
+            "windows-automation",
+            "dns"
+          ]
+        },
+        {
+          "slug": "windows-automation",
+          "name": "Windows Automation",
+          "summary": "PowerShell scripting, scheduled tasks, and workstation automation.",
+          "keywords": [
+            "powershell",
+            "scheduled tasks",
+            "automation",
+            "workstation"
+          ],
+          "icon": "script",
+          "what": "I write PowerShell scripts, scheduled tasks and workstation automation so routine Windows work runs on its own, with a clear, maintainable set of tasks rather than one-off manual steps.",
+          "related": [
+            "windows-desktop",
+            "windows-servers",
+            "automated-backups"
+          ]
+        },
+        {
+          "slug": "powershell",
+          "name": "PowerShell",
+          "summary": "PowerShell scripting for Windows automation and administration.",
+          "keywords": [
+            "powershell",
+            "scripting",
+            "windows",
+            "automation"
+          ],
+          "what": "I write PowerShell scripts for Windows administration and automation: repeatable tasks, scheduled jobs and clear, maintainable scripts.",
+          "related": [
+            "windows-automation",
+            "windows-desktop",
+            "windows-servers"
+          ],
+          "favicon": "powershell"
         },
         {
           "slug": "dns",
           "name": "DNS",
           "summary": "Domain records, routing and mail-related DNS for live services.",
-          "keywords": ["dns", "domains", "records", "nameservers"],
+          "keywords": [
+            "dns",
+            "domains",
+            "records",
+            "nameservers"
+          ],
           "what": "I plan and maintain DNS for websites and mail: A, AAAA, CNAME, MX and TXT records, including SPF, DKIM and DMARC, with changes made carefully.",
-          "related": ["tls-acme", "mail-servers", "linux"]
+          "related": [
+            "tls-acme",
+            "mail-servers",
+            "linux"
+          ],
+          "icon": "globe"
         },
         {
           "slug": "tls-acme",
           "name": "TLS and ACME",
           "summary": "Certificates and HTTPS for public sites and services.",
-          "keywords": ["tls", "ssl", "https", "acme", "certificates"],
+          "keywords": [
+            "tls",
+            "ssl",
+            "https",
+            "acme",
+            "certificates"
+          ],
           "what": "I put HTTPS in place with automatically renewed certificates, and keep certificate and redirect behaviour correct as domains change.",
-          "related": ["dns", "reverse-proxies", "linux"]
+          "related": [
+            "dns",
+            "reverse-proxies",
+            "linux"
+          ],
+          "icon": "lock"
         },
         {
           "slug": "mail-servers",
           "name": "SMTP, DKIM and IMAP mail",
           "summary": "Business email: self-hosted or managed, with correct DNS and authentication.",
-          "keywords": ["smtp", "imap", "dkim", "spf", "dmarc", "email", "mail"],
+          "keywords": [
+            "smtp",
+            "imap",
+            "dkim",
+            "spf",
+            "dmarc",
+            "email",
+            "mail"
+          ],
           "what": "I set up business email on a domain — self-hosted or managed — with SPF, DKIM and DMARC in place, and help with mailbox migrations.",
-          "related": ["dns", "linux", "windows-servers"]
+          "related": [
+            "dns",
+            "linux",
+            "windows-servers"
+          ],
+          "icon": "mail"
         },
         {
           "slug": "reverse-proxies",
           "name": "Reverse proxies",
           "summary": "Front doors for web apps: TLS termination, routing and isolation.",
-          "keywords": ["proxy", "nginx", "caddy", "routing"],
+          "keywords": [
+            "proxy",
+            "nginx",
+            "caddy",
+            "routing"
+          ],
           "what": "I place reverse proxies in front of applications for TLS, host routing and a single public entry point, so services stay isolated on the private side.",
-          "related": ["tls-acme", "linux", "uptime-monitoring"]
+          "related": [
+            "tls-acme",
+            "linux",
+            "uptime-monitoring"
+          ],
+          "icon": "proxy"
         },
         {
           "slug": "uptime-monitoring",
           "name": "Uptime monitoring",
           "summary": "Checks and alerts when a site or service stops responding.",
-          "keywords": ["uptime", "monitoring", "alerts", "health"],
+          "keywords": [
+            "uptime",
+            "monitoring",
+            "alerts",
+            "health"
+          ],
           "what": "I set up uptime and health checks so outages are noticed quickly, with alerts that go to the people who can act on them.",
-          "related": ["linux", "reverse-proxies", "dns"]
+          "related": [
+            "linux",
+            "reverse-proxies",
+            "dns"
+          ],
+          "icon": "activity"
         },
         {
           "slug": "cloudflare",
           "name": "Cloudflare",
           "summary": "Workers, Pages and DNS as supporting infrastructure tools.",
-          "keywords": ["cloudflare", "workers", "pages", "cdn", "dns"],
+          "keywords": [
+            "cloudflare",
+            "workers",
+            "pages",
+            "cdn",
+            "dns"
+          ],
           "favicon": "cloudflare",
-          "favicon_source": "https://www.cloudflare.com/favicon.ico",
           "what": "I use Cloudflare Workers, Pages and DNS when they are the right supporting tools for a deployment — alongside self-hosted Linux and Windows infrastructure, not in place of core engineering.",
-          "related": ["dns", "tls-acme", "azure", "aws"]
+          "related": [
+            "dns",
+            "tls-acme",
+            "azure",
+            "aws",
+            "cloudflare-proxying"
+          ]
+        },
+        {
+          "slug": "cloudflare-proxying",
+          "name": "Cloudflare Proxying",
+          "summary": "DNS routing, proxying, TLS, and edge caching.",
+          "keywords": [
+            "proxy",
+            "dns",
+            "tls",
+            "caching",
+            "routing"
+          ],
+          "icon": "proxy",
+          "what": "I configure DNS routing, proxying, TLS and edge caching so sites are reachable and cached at the edge. This is supporting infrastructure work, not a headline skill.",
+          "related": [
+            "cloudflare",
+            "dns",
+            "tls-acme",
+            "reverse-proxies"
+          ]
         },
         {
           "slug": "azure",
           "name": "Azure",
           "summary": "Microsoft Azure as a supporting cloud for compute, storage and networking.",
-          "keywords": ["azure", "microsoft", "cloud", "vms"],
+          "keywords": [
+            "azure",
+            "microsoft",
+            "cloud",
+            "vms"
+          ],
           "favicon": "azure",
-          "favicon_source": "https://azure.microsoft.com/favicon.ico",
           "what": "I work with Azure when a project already lives there or needs Microsoft cloud services, as a supporting platform next to self-hosted infrastructure.",
-          "related": ["aws", "cloudflare", "linux", "windows-servers"]
+          "related": [
+            "aws",
+            "cloudflare",
+            "linux",
+            "windows-servers"
+          ]
         },
         {
           "slug": "aws",
           "name": "AWS",
           "summary": "Amazon Web Services as a supporting cloud for compute, storage and networking.",
-          "keywords": ["aws", "amazon", "cloud", "ec2", "s3"],
+          "keywords": [
+            "aws",
+            "amazon",
+            "cloud",
+            "ec2",
+            "s3"
+          ],
           "favicon": "aws",
-          "favicon_source": "https://aws.amazon.com/favicon.ico",
           "what": "I work with AWS when a project requires it, using it as a supporting cloud platform rather than the centre of how I design software and systems.",
-          "related": ["azure", "cloudflare", "linux", "dns"]
+          "related": [
+            "azure",
+            "cloudflare",
+            "linux",
+            "dns"
+          ]
         }
       ]
     },
@@ -227,88 +670,195 @@
       "slug": "protocols-commerce-crypto",
       "name": "Protocols, Commerce & Crypto",
       "summary": "Interfaces between systems, payments in everyday currencies, and on-chain settlement.",
-      "keywords": ["protocols", "rpc", "rest", "websockets", "payments", "crypto", "commerce"],
+      "keywords": [
+        "protocols",
+        "rpc",
+        "rest",
+        "websockets",
+        "payments",
+        "crypto",
+        "commerce"
+      ],
       "icon": "nodes",
       "cards": [
         {
           "slug": "rpc",
           "name": "RPC and JSON-RPC",
           "summary": "Remote procedure interfaces, including JSON-RPC services and clients.",
-          "keywords": ["rpc", "json-rpc", "api"],
+          "keywords": [
+            "rpc",
+            "json-rpc",
+            "api"
+          ],
           "what": "I design and integrate RPC and JSON-RPC interfaces so applications can call remote procedures with clear, documented payloads.",
-          "related": ["rest", "webhooks", "rpc-nodes"]
+          "related": [
+            "rest",
+            "webhooks",
+            "rpc-nodes"
+          ],
+          "icon": "plug"
         },
         {
           "slug": "rest",
           "name": "REST",
           "summary": "HTTP APIs with predictable resources and error handling.",
-          "keywords": ["rest", "http", "api", "json"],
+          "keywords": [
+            "rest",
+            "http",
+            "api",
+            "json"
+          ],
           "what": "I build and consume REST APIs with clear resource paths, status codes and JSON payloads, suited to web applications and integrations.",
-          "related": ["rpc", "webhooks", "nodejs-stdlib"]
+          "related": [
+            "rpc",
+            "webhooks",
+            "nodejs-stdlib"
+          ],
+          "icon": "swap"
         },
         {
           "slug": "websockets",
           "name": "WebSockets",
           "summary": "Two-way connections for live updates in the browser or between services.",
-          "keywords": ["websocket", "realtime", "live"],
+          "keywords": [
+            "websocket",
+            "realtime",
+            "live"
+          ],
           "what": "I use WebSockets when a product needs live updates — dashboards, messaging or operational views — with reconnection and error handling thought through.",
-          "related": ["javascript", "mqtt", "rest"]
+          "related": [
+            "javascript",
+            "mqtt",
+            "rest"
+          ],
+          "icon": "pulse"
         },
         {
           "slug": "mqtt",
           "name": "MQTT",
           "summary": "Lightweight publish and subscribe messaging for devices and services.",
-          "keywords": ["mqtt", "pubsub", "iot", "messaging"],
+          "keywords": [
+            "mqtt",
+            "pubsub",
+            "iot",
+            "messaging"
+          ],
           "what": "I integrate MQTT for publish-and-subscribe messaging between services or devices, including topics, quality of service and retained messages where they are needed.",
-          "related": ["websockets", "webhooks", "linux"]
+          "related": [
+            "websockets",
+            "webhooks",
+            "linux"
+          ],
+          "icon": "radio"
         },
         {
           "slug": "webhooks",
           "name": "Webhooks",
           "summary": "Signed HTTP callbacks for events between systems.",
-          "keywords": ["webhooks", "callbacks", "events", "integrations"],
+          "keywords": [
+            "webhooks",
+            "callbacks",
+            "events",
+            "integrations"
+          ],
           "what": "I implement webhook senders and receivers with signature checks, retries and idempotent handling so event-driven integrations stay reliable.",
-          "related": ["rest", "rpc", "fiat-checkout"]
+          "related": [
+            "rest",
+            "rpc",
+            "fiat-checkout"
+          ],
+          "icon": "webhook"
         },
         {
           "slug": "modular-plugins",
           "name": "Modular plugins",
           "summary": "Extension points so features can be added without rewriting the core.",
-          "keywords": ["plugins", "modules", "extensions"],
+          "keywords": [
+            "plugins",
+            "modules",
+            "extensions"
+          ],
           "what": "I design modular plugin hooks so a product can gain features later without a rewrite of the core, with a clear contract for each extension.",
-          "related": ["nodejs", "zero-dependency-apps", "rest"]
+          "related": [
+            "nodejs",
+            "zero-dependency-apps",
+            "rest"
+          ],
+          "icon": "modules"
         },
         {
           "slug": "fiat-checkout",
           "name": "Multi-currency fiat checkout and subscriptions",
           "summary": "Card and wallet checkout, including subscriptions, in everyday currencies.",
-          "keywords": ["payments", "checkout", "subscriptions", "fiat", "currency", "paypal"],
+          "keywords": [
+            "payments",
+            "checkout",
+            "subscriptions",
+            "fiat",
+            "currency",
+            "paypal"
+          ],
           "what": "I implement checkout and subscription flows for payments in everyday currencies, including receipts and the operational pages a buyer needs after paying.",
-          "related": ["webhooks", "csv-pdf", "crypto-wallets"]
+          "related": [
+            "webhooks",
+            "csv-pdf",
+            "crypto-wallets"
+          ],
+          "icon": "checkout"
         },
         {
           "slug": "crypto-wallets",
           "name": "Cryptocurrency wallets",
           "summary": "Wallet flows for holding and sending supported digital assets.",
-          "keywords": ["wallet", "cryptocurrency", "keys", "assets"],
+          "keywords": [
+            "wallet",
+            "cryptocurrency",
+            "keys",
+            "assets"
+          ],
           "what": "I build wallet-related application flows — send, receive and balance views — with careful handling of keys and confirmation, for products that need them.",
-          "related": ["rpc-nodes", "on-chain-settlement", "fiat-checkout"]
+          "related": [
+            "rpc-nodes",
+            "on-chain-settlement",
+            "fiat-checkout"
+          ],
+          "icon": "wallet"
         },
         {
           "slug": "rpc-nodes",
           "name": "RPC nodes",
           "summary": "Connections to blockchain RPC nodes for reads and transaction broadcast.",
-          "keywords": ["rpc", "nodes", "blockchain", "json-rpc"],
+          "keywords": [
+            "rpc",
+            "nodes",
+            "blockchain",
+            "json-rpc"
+          ],
           "what": "I connect applications to blockchain RPC nodes for reads and transaction broadcast, with clear handling of node errors, fees and confirmation.",
-          "related": ["rpc", "on-chain-settlement", "crypto-wallets"]
+          "related": [
+            "rpc",
+            "on-chain-settlement",
+            "crypto-wallets"
+          ],
+          "icon": "cluster"
         },
         {
           "slug": "on-chain-settlement",
           "name": "On-chain settlement",
           "summary": "Recording and confirming value transfer on a supported chain.",
-          "keywords": ["settlement", "on-chain", "transactions", "crypto"],
+          "keywords": [
+            "settlement",
+            "on-chain",
+            "transactions",
+            "crypto"
+          ],
           "what": "I implement on-chain settlement in applications that need it: constructing transfers, waiting for confirmation, and recording the result against an order or account.",
-          "related": ["crypto-wallets", "rpc-nodes", "fiat-checkout"]
+          "related": [
+            "crypto-wallets",
+            "rpc-nodes",
+            "fiat-checkout"
+          ],
+          "icon": "chain"
         }
       ]
     }

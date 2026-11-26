@@ -6,25 +6,20 @@
     if(form.website_hp && form.website_hp.value) return;
     var name=(form.name.value||"").trim();
     var email=(form.email.value||"").trim();
-    var type=(form.work_type.value||"").trim();
-    var budget=(form.budget.value||"").trim();
-    var timeline=(form.timeline.value||"").trim();
-    var brief=(form.brief.value||"").trim();
-    if(!name||!email||!type||!budget||!timeline||!brief){
-      var msg=form.querySelector("[data-form-msg]");
+    var subject=(form.subject.value||"").trim();
+    var need=(form.need.value||"").trim();
+    var msg=form.querySelector("[data-form-msg]");
+    if(!name||!email||!subject||!need){
       if(msg) msg.textContent="Please complete every required field.";
       return;
     }
-    var subject="Project enquiry — "+type+" — "+budget;
     var body=[
       "Name: "+name,
       "Email: "+email,
-      "Work type: "+type,
-      "Budget band: "+budget,
-      "Timeline: "+timeline,
+      "Subject: "+subject,
       "",
-      "Brief:",
-      brief
+      "What you need:",
+      need
     ].join("\r\n");
     window.location.href="mailto:support@rohankells.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
   });

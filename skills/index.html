@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Software and systems engineering skills: web and app engineering, backend and data, infrastructure and self-hosting, and protocols, commerce and crypto.">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/rk-portfolio.css">
 <script src="/assets/rk-nav.js" defer></script>
@@ -34,13 +35,13 @@
 <div class="wrap">
 <header class="rk-top">
   <div class="rk-top-in">
-    <a class="rk-wordmark" href="/">Rohan <span>Kells</span></a>
+    <a class="rk-wordmark" href="/"><img src="/favicon.svg" width="16" height="16" alt="">Rohan <span>Kells</span></a>
     <nav class="rk-nav" aria-label="Primary">
-      <a href="/skills/" aria-current="page">Skills</a>
-      <a href="/business-it/">Business IT</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/hire/" class="nav-hire">Hire</a>
+      <a href="/skills/" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>Skills</a>
+      <a href="/capabilities/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>Capabilities</a>
+      <a href="/business-it/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V6l8-3 8 3v14H4zM9 20v-6h6v6M9 9h.01M15 9h.01M12 9h.01"/></svg>Business IT</a>
+      <a href="/hire/" class="nav-hire"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>Hire</a>
+      <a href="/resume/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M10 13h6M10 17h4"/></svg>Resume</a>
     </nav>
     <div class="rk-nav-tools">
       <div data-auth-kit-slot class="ak-slot"></div>
@@ -56,7 +57,10 @@
   <section class="section">
     <div class="skills-search">
       <label for="skills-q">Search skills and cards</label>
-      <input id="skills-q" type="search" data-skills-search autocomplete="off" maxlength="200">
+      <div class="search-field">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="skills-q" type="search" data-skills-search autocomplete="off" maxlength="200">
+      </div>
       <p class="search-count" data-search-count></p>
       <p data-empty>No skills or cards match that search.</p>
     </div>
@@ -68,19 +72,19 @@
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>
       <h3>Web &amp; App Engineering</h3>
       <p>Sites and web applications, from structure and interface through to a live, maintained service.</p>
-      <p>7 cards in this skill.</p>
+      <p>10 cards in this skill.</p>
     </a>
     <a class="cap-card" data-skill-item data-name="Backend &amp; Data" data-keywords="Backend &amp; Data Services, storage, sign-in and the everyday data work that keeps a product running. backend data api sqlite auth security" data-category="Skill" href="/skills/backend-and-data/">
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
       <h3>Backend &amp; Data</h3>
       <p>Services, storage, sign-in and the everyday data work that keeps a product running.</p>
-      <p>6 cards in this skill.</p>
+      <p>7 cards in this skill.</p>
     </a>
     <a class="cap-card" data-skill-item data-name="Infrastructure &amp; Self-Hosting" data-keywords="Infrastructure &amp; Self-Hosting Servers, DNS, certificates, mail and the operations work that keeps systems online. infrastructure servers linux windows dns tls hosting self-hosted" data-category="Skill" href="/skills/infrastructure/">
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v4H4zM4 14h16v4H4zM8 8h.01M8 16h.01"/></svg>
       <h3>Infrastructure &amp; Self-Hosting</h3>
       <p>Servers, DNS, certificates, mail and the operations work that keeps systems online.</p>
-      <p>10 cards in this skill.</p>
+      <p>16 cards in this skill.</p>
     </a>
     <a class="cap-card" data-skill-item data-name="Protocols, Commerce &amp; Crypto" data-keywords="Protocols, Commerce &amp; Crypto Interfaces between systems, payments in everyday currencies, and on-chain settlement. protocols rpc rest websockets payments crypto commerce" data-category="Skill" href="/skills/protocols-commerce-crypto/">
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16"/></svg>
@@ -96,7 +100,7 @@
     <p class="sub">Each card has its own page, including official cached marks for third-party platforms.</p>
     <div class="grid">
       <a class="card repo-card" data-skill-item data-name="HTML" data-keywords="markup semantic accessibility seo" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/html/">
-        <span class="logo"><span class="mono">H</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-5 6 5 6M16 6l5 6-5 6"/></svg></span>
         <span class="meta">
           <strong>HTML</strong>
           <span>Semantic document structure for accessible, crawlable web interfaces.</span>
@@ -104,7 +108,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="CSS" data-keywords="layout responsive design styles" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/css/">
-        <span class="logo"><span class="mono">C</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="9" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="13.5" cy="9" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.2" fill="currentColor" stroke="none"/></svg></span>
         <span class="meta">
           <strong>CSS</strong>
           <span>Layout, typography and responsive styling without a heavy framework.</span>
@@ -112,7 +116,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="JavaScript" data-keywords="js browser client vanilla" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/javascript/">
-        <span class="logo"><span class="mono">J</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5c-2 0-3 1.5-3 3v2c0 1-1 1.5-2 2 1 .5 2 1 2 2v2c0 1.5 1 3 3 3M15 5c2 0 3 1.5 3 3v2c0 1 1 1.5 2 2-1 .5-2 1-2 2v2c0 1.5-1 3-3 3"/></svg></span>
         <span class="meta">
           <strong>JavaScript</strong>
           <span>Browser and server JavaScript for interactive interfaces and tooling.</span>
@@ -128,7 +132,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Responsive UI and UX" data-keywords="ui ux mobile responsive design" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/responsive-ui/">
-        <span class="logo"><span class="mono">R</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="12" height="10" rx="1"/><rect x="16" y="10" width="5" height="8" rx="1"/></svg></span>
         <span class="meta">
           <strong>Responsive UI and UX</strong>
           <span>Interfaces that stay usable across phone, tablet and desktop.</span>
@@ -136,7 +140,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Zero-dependency web apps" data-keywords="zero-dependency self-hosted static vanilla" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/zero-dependency-apps/">
-        <span class="logo"><span class="mono">Z</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8 12 4l9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8M12 12v8"/></svg></span>
         <span class="meta">
           <strong>Zero-dependency web apps</strong>
           <span>Self-contained applications that do not require a heavy package tree.</span>
@@ -144,10 +148,34 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Single-page and multi-site architecture" data-keywords="architecture multi-site spa ia" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/site-architecture/">
-        <span class="logo"><span class="mono">S</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="4" rx="1"/><rect x="3" y="17" width="6" height="4" rx="1"/><rect x="15" y="17" width="6" height="4" rx="1"/><path d="M12 7v6H6v4M12 13h6v4"/></svg></span>
         <span class="meta">
           <strong>Single-page and multi-site architecture</strong>
           <span>Information architecture for one site, or a set of sites that share patterns.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="WordPress" data-keywords="wordpress cms themes plugins" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/wordpress/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/wordpress.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>WordPress</strong>
+          <span>Self-hosted WordPress sites, themes, and plugin work.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Visual Studio" data-keywords="visual studio ide windows debugging" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/visual-studio/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/visualstudio.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Visual Studio</strong>
+          <span>Building and debugging software with Visual Studio.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="GitHub" data-keywords="github git source control releases" data-category="Web &amp; App Engineering" href="/skills/web-and-app-engineering/github/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/github.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>GitHub</strong>
+          <span>Public source control, issues and releases on GitHub.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -168,7 +196,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Authentication" data-keywords="auth login accounts identity" data-category="Backend &amp; Data" href="/skills/backend-and-data/authentication/">
-        <span class="logo"><span class="mono">A</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14" r="3"/><path d="M11 14h10v3M17 14v3"/></svg></span>
         <span class="meta">
           <strong>Authentication</strong>
           <span>Sign-in, accounts and credential handling for web applications.</span>
@@ -176,7 +204,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Session security" data-keywords="sessions cookies csrf security" data-category="Backend &amp; Data" href="/skills/backend-and-data/session-security/">
-        <span class="logo"><span class="mono">S</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span>
         <span class="meta">
           <strong>Session security</strong>
           <span>Session cookies, expiry and protection against common session attacks.</span>
@@ -184,7 +212,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Automated backups" data-keywords="backup restore retention operations" data-category="Backend &amp; Data" href="/skills/backend-and-data/automated-backups/">
-        <span class="logo"><span class="mono">A</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v3H4zM6 10v9h12v-9M10 13h4"/></svg></span>
         <span class="meta">
           <strong>Automated backups</strong>
           <span>Scheduled copies of application data and configuration.</span>
@@ -192,31 +220,79 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="CSV and PDF generation" data-keywords="csv pdf export reports" data-category="Backend &amp; Data" href="/skills/backend-and-data/csv-pdf/">
-        <span class="logo"><span class="mono">C</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M10 13h6M10 17h4"/></svg></span>
         <span class="meta">
           <strong>CSV and PDF generation</strong>
           <span>Export of reports and records as CSV or PDF files.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Ollama" data-keywords="ollama local ai models" data-category="Backend &amp; Data" href="/skills/backend-and-data/ollama/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/ollama.png" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Ollama</strong>
+          <span>Running and managing local AI models.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Linux servers" data-keywords="linux server ssh systemd" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/linux/">
-        <span class="logo"><span class="mono">L</span></span>
+        <span class="logo"><img class="favicon" src="/assets/favicons/linux.png" width="16" height="16" alt=""></span>
         <span class="meta">
           <strong>Linux servers</strong>
           <span>Provisioning, hardening and day-to-day operation of Linux hosts.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Debian" data-keywords="debian linux apt servers" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/debian/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/debian.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Debian</strong>
+          <span>Debian servers: install, hardening and day-to-day operations.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Docker" data-keywords="docker containers compose" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/docker/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/docker.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Docker</strong>
+          <span>Container images, Compose files and local Docker workflows.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="Windows servers" data-keywords="windows server active directory smb" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/windows-servers/">
-        <span class="logo"><span class="mono">W</span></span>
+        <span class="logo"><img class="favicon" src="/assets/favicons/windows.ico" width="16" height="16" alt=""></span>
         <span class="meta">
           <strong>Windows servers</strong>
           <span>Windows hosts for business applications, file services and local networks.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
+      <a class="card repo-card" data-skill-item data-name="Windows desktop" data-keywords="windows desktop workstation administration troubleshooting" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/windows-desktop/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/windows.ico" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>Windows desktop</strong>
+          <span>Windows desktop setup, administration, troubleshooting and tooling.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Windows Automation" data-keywords="powershell scheduled tasks automation workstation" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/windows-automation/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3M9 12h6M9 16h4"/></svg></span>
+        <span class="meta">
+          <strong>Windows Automation</strong>
+          <span>PowerShell scripting, scheduled tasks, and workstation automation.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="PowerShell" data-keywords="powershell scripting windows automation" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/powershell/">
+        <span class="logo"><img class="favicon" src="/assets/favicons/powershell.png" width="16" height="16" alt=""></span>
+        <span class="meta">
+          <strong>PowerShell</strong>
+          <span>PowerShell scripting for Windows automation and administration.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
       <a class="card repo-card" data-skill-item data-name="DNS" data-keywords="dns domains records nameservers" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/dns/">
-        <span class="logo"><span class="mono">D</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span>
         <span class="meta">
           <strong>DNS</strong>
           <span>Domain records, routing and mail-related DNS for live services.</span>
@@ -224,7 +300,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="TLS and ACME" data-keywords="tls ssl https acme certificates" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/tls-acme/">
-        <span class="logo"><span class="mono">T</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
         <span class="meta">
           <strong>TLS and ACME</strong>
           <span>Certificates and HTTPS for public sites and services.</span>
@@ -232,7 +308,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="SMTP, DKIM and IMAP mail" data-keywords="smtp imap dkim spf dmarc email mail" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/mail-servers/">
-        <span class="logo"><span class="mono">S</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg></span>
         <span class="meta">
           <strong>SMTP, DKIM and IMAP mail</strong>
           <span>Business email: self-hosted or managed, with correct DNS and authentication.</span>
@@ -240,7 +316,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Reverse proxies" data-keywords="proxy nginx caddy routing" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/reverse-proxies/">
-        <span class="logo"><span class="mono">R</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="6" height="8" rx="1"/><rect x="15" y="8" width="6" height="8" rx="1"/><path d="M9 12h6M13 10l2 2-2 2"/></svg></span>
         <span class="meta">
           <strong>Reverse proxies</strong>
           <span>Front doors for web apps: TLS termination, routing and isolation.</span>
@@ -248,7 +324,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Uptime monitoring" data-keywords="uptime monitoring alerts health" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/uptime-monitoring/">
-        <span class="logo"><span class="mono">U</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span>
         <span class="meta">
           <strong>Uptime monitoring</strong>
           <span>Checks and alerts when a site or service stops responding.</span>
@@ -260,6 +336,14 @@
         <span class="meta">
           <strong>Cloudflare</strong>
           <span>Workers, Pages and DNS as supporting infrastructure tools.</span>
+        </span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="card repo-card" data-skill-item data-name="Cloudflare Proxying" data-keywords="proxy dns tls caching routing" data-category="Infrastructure &amp; Self-Hosting" href="/skills/infrastructure/cloudflare-proxying/">
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="6" height="8" rx="1"/><rect x="15" y="8" width="6" height="8" rx="1"/><path d="M9 12h6M13 10l2 2-2 2"/></svg></span>
+        <span class="meta">
+          <strong>Cloudflare Proxying</strong>
+          <span>DNS routing, proxying, TLS, and edge caching.</span>
         </span>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
@@ -280,7 +364,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="RPC and JSON-RPC" data-keywords="rpc json-rpc api" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/rpc/">
-        <span class="logo"><span class="mono">R</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v5M16 4v5M7 9h10v4a5 5 0 0 1-10 0zM12 18v3"/></svg></span>
         <span class="meta">
           <strong>RPC and JSON-RPC</strong>
           <span>Remote procedure interfaces, including JSON-RPC services and clients.</span>
@@ -288,7 +372,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="REST" data-keywords="rest http api json" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/rest/">
-        <span class="logo"><span class="mono">R</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3M7 19l-3-3h13"/></svg></span>
         <span class="meta">
           <strong>REST</strong>
           <span>HTTP APIs with predictable resources and error handling.</span>
@@ -296,7 +380,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="WebSockets" data-keywords="websocket realtime live" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/websockets/">
-        <span class="logo"><span class="mono">W</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h3l2-5 3 10 2-5h6"/></svg></span>
         <span class="meta">
           <strong>WebSockets</strong>
           <span>Two-way connections for live updates in the browser or between services.</span>
@@ -304,7 +388,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="MQTT" data-keywords="mqtt pubsub iot messaging" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/mqtt/">
-        <span class="logo"><span class="mono">M</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M7 7a7 7 0 0 0 0 10M17 7a7 7 0 0 1 0 10M4.5 4.5a11 11 0 0 0 0 15M19.5 4.5a11 11 0 0 1 0 15"/></svg></span>
         <span class="meta">
           <strong>MQTT</strong>
           <span>Lightweight publish and subscribe messaging for devices and services.</span>
@@ -312,7 +396,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Webhooks" data-keywords="webhooks callbacks events integrations" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/webhooks/">
-        <span class="logo"><span class="mono">W</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 8.5 10.5 16M16 8.5 13.5 16"/></svg></span>
         <span class="meta">
           <strong>Webhooks</strong>
           <span>Signed HTTP callbacks for events between systems.</span>
@@ -320,7 +404,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Modular plugins" data-keywords="plugins modules extensions" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/modular-plugins/">
-        <span class="logo"><span class="mono">M</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
         <span class="meta">
           <strong>Modular plugins</strong>
           <span>Extension points so features can be added without rewriting the core.</span>
@@ -328,7 +412,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Multi-currency fiat checkout and subscriptions" data-keywords="payments checkout subscriptions fiat currency paypal" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/fiat-checkout/">
-        <span class="logo"><span class="mono">M</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span>
         <span class="meta">
           <strong>Multi-currency fiat checkout and subscriptions</strong>
           <span>Card and wallet checkout, including subscriptions, in everyday currencies.</span>
@@ -336,7 +420,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="Cryptocurrency wallets" data-keywords="wallet cryptocurrency keys assets" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/crypto-wallets/">
-        <span class="logo"><span class="mono">C</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 10h18M16 13h3"/></svg></span>
         <span class="meta">
           <strong>Cryptocurrency wallets</strong>
           <span>Wallet flows for holding and sending supported digital assets.</span>
@@ -344,7 +428,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="RPC nodes" data-keywords="rpc nodes blockchain json-rpc" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/rpc-nodes/">
-        <span class="logo"><span class="mono">R</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="8" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="6" cy="16" r="2.5"/><circle cx="18" cy="16" r="2.5"/><path d="M8.5 8h7M6 10.5v3M18 10.5v3"/></svg></span>
         <span class="meta">
           <strong>RPC nodes</strong>
           <span>Connections to blockchain RPC nodes for reads and transaction broadcast.</span>
@@ -352,7 +436,7 @@
         <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
       </a>
       <a class="card repo-card" data-skill-item data-name="On-chain settlement" data-keywords="settlement on-chain transactions crypto" data-category="Protocols, Commerce &amp; Crypto" href="/skills/protocols-commerce-crypto/on-chain-settlement/">
-        <span class="logo"><span class="mono">O</span></span>
+        <span class="logo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a4 4 0 0 1 0-6l3-3a4 4 0 0 1 6 6l-1.5 1.5M14 11a4 4 0 0 1 0 6l-3 3a4 4 0 0 1-6-6L6.5 14.5"/></svg></span>
         <span class="meta">
           <strong>On-chain settlement</strong>
           <span>Recording and confirming value transfer on a supported chain.</span>
@@ -364,46 +448,23 @@
 </main>
 <footer class="rk-foot">
   <div class="rk-foot-in">
-    <div class="rk-foot-grid">
-      <div>
-        <p class="brand-f">Rohan Kells</p>
-        <p>Independent developer in Australia.</p>
-        <p><a href="mailto:support@rohankells.com">support@rohankells.com</a></p>
-      </div>
-      <div>
-        <p class="brand-f" style="font-size:1rem">Site</p>
-        <ul>
-          <li><a href="/skills/">Skills</a></li>
-          <li><a href="/capabilities/">Capabilities</a></li>
-          <li><a href="/business-it/">Business IT</a></li>
-          <li><a href="/hire/">Hire</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/resume/">Resume</a></li>
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="brand-f" style="font-size:1rem">Legal</p>
-        <ul>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-          <li><a href="/refunds/">Refund policy</a></li>
-          <li><a href="/delivery/">Delivery</a></li>
-          <li><a href="/cookies/">Cookies</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="rk-legal">
-      <p>&copy; 2026 Rohan Kells. Australia.</p>
-      <nav aria-label="Social and legal">
-        <a href="https://github.com/kellsrohan" rel="noopener noreferrer">GitHub</a>
+      <p>&copy; 2026 Rohan Kells. Australia. <a href="mailto:support@rohankells.com">support@rohankells.com</a></p>
+      <p class="updated">Last updated: 27 November 2026</p>
+      <nav aria-label="Site and legal">
+        <a href="/skills/">Skills</a>
+        <a href="/capabilities/">Capabilities</a>
+        <a href="/business-it/">Business IT</a>
+        <a href="/hire/">Hire</a>
+        <a href="/resume/">Resume</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
         <a href="/refunds/">Refunds</a>
         <a href="/delivery/">Delivery</a>
         <a href="/cookies/">Cookies</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about/">About</a>
+        <a href="https://github.com/kellsrohan" rel="noopener noreferrer"><img src="/assets/favicons/github.svg" width="16" height="16" alt="">GitHub</a>
       </nav>
     </div>
   </div>

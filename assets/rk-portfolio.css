@@ -50,7 +50,10 @@
 
 *{box-sizing:border-box}
 html{color-scheme:light dark;scroll-behavior:smooth}
+html{min-height:100%}
 html,body{margin:0;padding:0;background:var(--canvas);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;display:flex;flex-direction:column}
+
 img{max-width:100%;height:auto;display:block}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -61,8 +64,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .skip:focus{left:12px;top:12px}
 
 .page-bg{display:none}
-.wrap{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column}
+.wrap{position:relative;z-index:1;flex:1;min-height:100vh;display:flex;flex-direction:column}
 main{flex:1}
+
 
 /* Header and underline nav */
 .rk-top{
@@ -76,16 +80,20 @@ main{flex:1}
 }
 .rk-wordmark{
   font-weight:600;font-size:16px;color:var(--fg);text-decoration:none;
-  display:flex;align-items:baseline;gap:.35rem;white-space:nowrap;margin-right:8px;
+  display:flex;align-items:center;gap:.45rem;white-space:nowrap;margin-right:8px;
 }
+.rk-wordmark img{width:16px;height:16px;border-radius:3px;flex:0 0 16px}
+
 .rk-wordmark:hover{color:var(--fg);text-decoration:none}
 .rk-wordmark span{font-weight:600;color:var(--fg)}
 nav.rk-nav{display:flex;align-items:stretch;gap:0;align-self:stretch;flex:1}
 nav.rk-nav a{
   color:var(--fg);text-decoration:none;font-size:14px;font-weight:500;
-  padding:8px 12px;display:flex;align-items:center;
+  padding:8px 12px;display:flex;align-items:center;gap:6px;
   border-bottom:2px solid transparent;margin-bottom:-1px;
 }
+nav.rk-nav a svg{width:16px;height:16px;flex:0 0 16px}
+
 nav.rk-nav a:hover{color:var(--fg);text-decoration:none;border-bottom-color:var(--border)}
 nav.rk-nav a[aria-current="page"]{border-bottom-color:var(--underline);font-weight:600}
 nav.rk-nav a.nav-hire{
@@ -122,10 +130,14 @@ nav.rk-nav a.nav-hire[aria-current="page"]{box-shadow:0 0 0 2px var(--canvas),0 
 }
 .hero-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .avatar-ring{
-  width:56px;height:56px;border-radius:50%;padding:0;
-  border:1px solid var(--border);overflow:hidden;flex:0 0 56px;background:var(--canvas-subtle);
+  width:160px;height:160px;border-radius:50%;padding:0;
+  border:1px solid var(--border);overflow:hidden;flex:0 0 160px;background:var(--canvas-subtle);
 }
-.avatar-ring img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center}
+.avatar-ring img{width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:center}
+@media (max-width:820px){
+  .avatar-ring{width:120px;height:120px;flex:0 0 120px}
+  .avatar-ring img{width:120px;height:120px}
+}
 .hero .kicker{
   font-size:12px;letter-spacing:0;text-transform:none;color:var(--fg-muted);
   font-weight:500;margin:0 0 8px;
@@ -199,6 +211,10 @@ a.card:hover,a.cap-card:hover,a.repo-card:hover{
 .card .logo .mono,.repo-card .logo .mono{
   font-family:var(--sans);color:var(--fg-muted);font-size:12px;font-weight:600;
 }
+.card .logo svg,.repo-card .logo svg,.card-head .logo svg{
+  width:16px;height:16px;display:block;color:var(--fg-muted);
+}
+
 .card .meta,.repo-card .meta{min-width:0;flex:1}
 .card strong,.repo-card strong,.cap-card h3,.skill h3,.block h3{
   display:block;color:var(--accent);font-weight:600;letter-spacing:0;margin:0 0 4px;font-size:14px;
@@ -225,7 +241,10 @@ a.card:hover,a.cap-card:hover,a.repo-card:hover{
 .skills li{
   border:1px solid var(--border);color:var(--fg);padding:3px 10px;font-size:12px;letter-spacing:0;
   border-radius:2em;background:var(--canvas-subtle);
+  display:inline-flex;align-items:center;gap:6px;
 }
+.skills li img,.skills li svg{width:16px;height:16px;flex:0 0 16px}
+
 .skills.support li{color:var(--fg-muted)}
 
 /* About */
@@ -265,10 +284,19 @@ a.card:hover,a.cap-card:hover,a.repo-card:hover{
 .rk-foot li{margin:0 0 6px}
 .rk-legal{
   border-top:1px solid var(--border);margin-top:24px;padding-top:16px;
-  display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;
+  display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center;
   font-size:12px;color:var(--fg-muted);
 }
-.rk-legal nav{display:flex;flex-wrap:wrap;gap:8px 16px}
+.rk-legal p{margin:0}
+.rk-legal .updated{color:var(--fg-muted)}
+.rk-legal nav{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.rk-legal nav img,.rk-legal nav svg{width:16px;height:16px;display:inline-block;vertical-align:-3px;margin-right:4px}
+.rk-foot a.with-ico{display:inline-flex;align-items:center;gap:4px}
+.avail-banner > div{display:flex;align-items:center;gap:10px}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:var(--success);flex:0 0 8px}
+.avail-banner[data-status="waitlist"] .avail-dot{background:var(--fg-muted)}
+.btn svg{width:16px;height:16px;flex:0 0 16px}
+
 
 /* Forms — Primer inputs */
 form.cf,form.hire-form{display:flex;flex-direction:column;gap:12px;max-width:36rem}
@@ -294,6 +322,13 @@ form.cf .consent input,form.hire-form .consent input{width:auto;margin-top:3px;m
 /* Search */
 .skills-search{margin:0 0 16px;max-width:36rem}
 .skills-search label{display:block;font-size:14px;font-weight:600;color:var(--fg);margin:0 0 4px}
+.skills-search .search-field{position:relative}
+.skills-search .search-field svg{
+  position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;color:var(--fg-muted);pointer-events:none;
+}
+.skills-search .search-field input[type="search"]{padding-left:32px}
+
 .skills-search .search-count{color:var(--fg-muted);font-size:12px;margin:6px 0 0}
 .skills-search [data-empty]{display:none;color:var(--fg-muted);margin:16px 0 0;font-size:14px}
 body.is-filtering [data-empty].is-visible{display:block}
@@ -353,10 +388,10 @@ body.is-filtering [data-empty].is-visible{display:block}
 .resume-doc{max-width:800px;margin:0 auto;padding:24px var(--pad) 48px}
 .resume-doc header.cv-top{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .resume-doc .cv-photo{
-  width:64px;height:64px;border-radius:50%;padding:0;flex:0 0 64px;border:1px solid var(--border);overflow:hidden;
+  width:112px;height:112px;border-radius:50%;padding:0;flex:0 0 112px;border:1px solid var(--border);overflow:hidden;
   background:var(--canvas-subtle);
 }
-.resume-doc .cv-photo img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.resume-doc .cv-photo img{width:112px;height:112px;border-radius:50%;object-fit:cover}
 .resume-doc h1{font-size:24px;margin:0 0 4px;letter-spacing:0;font-weight:600}
 .resume-doc .cv-title{color:var(--fg);margin:0 0 4px;font-size:16px}
 .resume-doc .cv-meta{color:var(--fg-muted);margin:0;font-size:14px}
@@ -394,3 +429,5 @@ body.is-filtering [data-empty].is-visible{display:block}
   a{color:#1a1a1a !important;text-decoration:none}
   .resume-doc{max-width:none;padding:0;margin:0}
 }
+
+.form-note{color:var(--fg-muted);font-size:13px;margin:0;font-weight:400}

@@ -28,6 +28,9 @@
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/responsive-ui/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/zero-dependency-apps/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/site-architecture/</loc></url>
+  <url><loc>https://rohankells.com/skills/web-and-app-engineering/wordpress/</loc></url>
+  <url><loc>https://rohankells.com/skills/web-and-app-engineering/visual-studio/</loc></url>
+  <url><loc>https://rohankells.com/skills/web-and-app-engineering/github/</loc></url>
   <url><loc>https://rohankells.com/skills/backend-and-data/</loc></url>
   <url><loc>https://rohankells.com/skills/backend-and-data/nodejs-stdlib/</loc></url>
   <url><loc>https://rohankells.com/skills/backend-and-data/sqlite/</loc></url>
@@ -35,15 +38,22 @@
   <url><loc>https://rohankells.com/skills/backend-and-data/session-security/</loc></url>
   <url><loc>https://rohankells.com/skills/backend-and-data/automated-backups/</loc></url>
   <url><loc>https://rohankells.com/skills/backend-and-data/csv-pdf/</loc></url>
+  <url><loc>https://rohankells.com/skills/backend-and-data/ollama/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/linux/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/debian/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/docker/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/windows-servers/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/windows-desktop/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/windows-automation/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/powershell/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/dns/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/tls-acme/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/mail-servers/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/reverse-proxies/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/uptime-monitoring/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/cloudflare/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/cloudflare-proxying/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/azure/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/aws/</loc></url>
   <url><loc>https://rohankells.com/skills/protocols-commerce-crypto/</loc></url>

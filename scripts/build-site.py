@@ -10,7 +10,9 @@ import json
 import re
 import shutil
 from html import escape
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "skills.json"
@@ -19,6 +21,10 @@ EMAIL = "support@rohankells.com"
 SITE = "https://rohankells.com"
 OG = f"{SITE}/assets/photos/kellsrohan.png"
 GITHUB = "https://github.com/kellsrohan"
+
+def last_updated_label() -> str:
+    d = datetime.now(ZoneInfo("Australia/Sydney")).date()
+    return f"Last updated: {d.day} {d.strftime("%B %Y")}"
 
 
 def load_catalog() -> dict:
@@ -59,19 +65,23 @@ def theme_tags() -> str:
     )
 
 
+def ico(name: str) -> str:
+    return ICONS.get(name, ICONS["code"])
+
+
 def nav_html(current=None) -> str:
     items = [
-        ("skills", "/skills/", "Skills"),
-        ("business-it", "/business-it/", "Business IT"),
-        ("about", "/about/", "About"),
-        ("contact", "/contact/", "Contact"),
-        ("hire", "/hire/", "Hire"),
+        ("skills", "/skills/", "Skills", "code"),
+        ("capabilities", "/capabilities/", "Capabilities", "grid"),
+        ("business-it", "/business-it/", "Business IT", "building"),
+        ("hire", "/hire/", "Hire", "briefcase"),
+        ("resume", "/resume/", "Resume", "document"),
     ]
     links = []
-    for key, href, label in items:
+    for key, href, label, icon in items:
         cur = ' aria-current="page"' if current == key else ""
         cls = ' class="nav-hire"' if key == "hire" else ""
-        links.append(f'      <a href="{href}"{cls}{cur}>{label}</a>')
+        links.append(f'      <a href="{href}"{cls}{cur}>{ICONS[icon]}{label}</a>')
     return '    <nav class="rk-nav" aria-label="Primary">\n' + "\n".join(links) + "\n    </nav>"
 
 
@@ -79,13 +89,12 @@ def header_html(current=None) -> str:
     return (
         '<header class="rk-top">\n'
         '  <div class="rk-top-in">\n'
-        '    <a class="rk-wordmark" href="/">Rohan <span>Kells</span></a>\n'
+        '    <a class="rk-wordmark" href="/"><img src="/favicon.svg" width="16" height="16" alt="">Rohan <span>Kells</span></a>\n'
         f"{nav_html(current)}\n"
         '    <div class="rk-nav-tools">\n'
         '      <div data-auth-kit-slot class="ak-slot"></div>\n'
         '      <button class="rk-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">'
-        '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
-        'stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>\n'
+        f'{ICONS["menu"]}</button>\n'
         "    </div>\n"
         "  </div>\n"
         "</header>"
@@ -93,48 +102,26 @@ def header_html(current=None) -> str:
 
 
 def footer_html() -> str:
+    updated = last_updated_label()
     return f"""<footer class="rk-foot">
   <div class="rk-foot-in">
-    <div class="rk-foot-grid">
-      <div>
-        <p class="brand-f">Rohan Kells</p>
-        <p>Independent developer in Australia.</p>
-        <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
-      </div>
-      <div>
-        <p class="brand-f" style="font-size:1rem">Site</p>
-        <ul>
-          <li><a href="/skills/">Skills</a></li>
-          <li><a href="/capabilities/">Capabilities</a></li>
-          <li><a href="/business-it/">Business IT</a></li>
-          <li><a href="/hire/">Hire</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/resume/">Resume</a></li>
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="brand-f" style="font-size:1rem">Legal</p>
-        <ul>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-          <li><a href="/refunds/">Refund policy</a></li>
-          <li><a href="/delivery/">Delivery</a></li>
-          <li><a href="/cookies/">Cookies</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="rk-legal">
-      <p>&copy; 2026 Rohan Kells. Australia.</p>
-      <nav aria-label="Social and legal">
-        <a href="{GITHUB}" rel="noopener noreferrer">GitHub</a>
+      <p>&copy; 2026 Rohan Kells. Australia. <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+      <p class="updated">{updated}</p>
+      <nav aria-label="Site and legal">
+        <a href="/skills/">Skills</a>
+        <a href="/capabilities/">Capabilities</a>
+        <a href="/business-it/">Business IT</a>
+        <a href="/hire/">Hire</a>
+        <a href="/resume/">Resume</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
         <a href="/refunds/">Refunds</a>
         <a href="/delivery/">Delivery</a>
         <a href="/cookies/">Cookies</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about/">About</a>
+        <a href="{GITHUB}" rel="noopener noreferrer"><img src="/assets/favicons/github.svg" width="16" height="16" alt="">GitHub</a>
       </nav>
     </div>
   </div>
@@ -181,6 +168,7 @@ def head_html(title, description, canonical, jsonld, scripts=None) -> str:
 <meta name="twitter:description" content="{escape(description, quote=True)}">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/rk-portfolio.css">
 <script src="/assets/rk-nav.js" defer></script>
@@ -212,11 +200,52 @@ def write(path: Path, text: str) -> None:
     print("wrote", path.relative_to(ROOT))
 
 
+def _svg(paths: str) -> str:
+    return (
+        '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'
+        + paths
+        + "</svg>"
+    )
+
+
 ICONS = {
-    "code": '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>',
-    "database": '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
-    "server": '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v4H4zM4 14h16v4H4zM8 8h.01M8 16h.01"/></svg>',
-    "nodes": '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16"/></svg>',
+    "code": _svg('<path d="m8 8-4 4 4 4M16 8l4 4-4 4"/>'),
+    "database": _svg('<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>'),
+    "server": _svg('<path d="M4 6h16v4H4zM4 14h16v4H4zM8 8h.01M8 16h.01"/>'),
+    "nodes": _svg('<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16"/>'),
+    "markup": _svg('<path d="m8 6-5 6 5 6M16 6l5 6-5 6"/>'),
+    "palette": _svg('<circle cx="12" cy="12" r="8"/><circle cx="9" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="13.5" cy="9" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.2" fill="currentColor" stroke="none"/>'),
+    "braces": _svg('<path d="M9 5c-2 0-3 1.5-3 3v2c0 1-1 1.5-2 2 1 .5 2 1 2 2v2c0 1.5 1 3 3 3M15 5c2 0 3 1.5 3 3v2c0 1 1 1.5 2 2-1 .5-2 1-2 2v2c0 1.5-1 3-3 3"/>'),
+    "devices": _svg('<rect x="3" y="5" width="12" height="10" rx="1"/><rect x="16" y="10" width="5" height="8" rx="1"/>'),
+    "box": _svg('<path d="M3 8 12 4l9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8M12 12v8"/>'),
+    "sitemap": _svg('<rect x="9" y="3" width="6" height="4" rx="1"/><rect x="3" y="17" width="6" height="4" rx="1"/><rect x="15" y="17" width="6" height="4" rx="1"/><path d="M12 7v6H6v4M12 13h6v4"/>'),
+    "key": _svg('<circle cx="8" cy="14" r="3"/><path d="M11 14h10v3M17 14v3"/>'),
+    "shield": _svg('<path d="M12 3l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/>'),
+    "archive": _svg('<path d="M4 7h16v3H4zM6 10v9h12v-9M10 13h4"/>'),
+    "document": _svg('<path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5M10 13h6M10 17h4"/>'),
+    "globe": _svg('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>'),
+    "lock": _svg('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
+    "mail": _svg('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/>'),
+    "proxy": _svg('<rect x="3" y="8" width="6" height="8" rx="1"/><rect x="15" y="8" width="6" height="8" rx="1"/><path d="M9 12h6M13 10l2 2-2 2"/>'),
+    "activity": _svg('<path d="M3 12h4l2-6 4 12 2-6h6"/>'),
+    "plug": _svg('<path d="M8 4v5M16 4v5M7 9h10v4a5 5 0 0 1-10 0zM12 18v3"/>'),
+    "swap": _svg('<path d="M4 8h13l-3-3M7 19l-3-3h13"/>'),
+    "pulse": _svg('<path d="M4 12h3l2-5 3 10 2-5h6"/>'),
+    "radio": _svg('<circle cx="12" cy="12" r="2"/><path d="M7 7a7 7 0 0 0 0 10M17 7a7 7 0 0 1 0 10M4.5 4.5a11 11 0 0 0 0 15M19.5 4.5a11 11 0 0 1 0 15"/>'),
+    "webhook": _svg('<circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 8.5 10.5 16M16 8.5 13.5 16"/>'),
+    "modules": _svg('<rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>'),
+    "checkout": _svg('<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/>'),
+    "wallet": _svg('<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 10h18M16 13h3"/>'),
+    "cluster": _svg('<circle cx="6" cy="8" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="6" cy="16" r="2.5"/><circle cx="18" cy="16" r="2.5"/><path d="M8.5 8h7M6 10.5v3M18 10.5v3"/>'),
+    "chain": _svg('<path d="M10 13a4 4 0 0 1 0-6l3-3a4 4 0 0 1 6 6l-1.5 1.5M14 11a4 4 0 0 1 0 6l-3 3a4 4 0 0 1-6-6L6.5 14.5"/>'),
+    "script": _svg('<path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3M9 12h6M9 16h4"/>'),
+    "building": _svg('<path d="M4 20V6l8-3 8 3v14H4zM9 20v-6h6v6M9 9h.01M15 9h.01M12 9h.01"/>'),
+    "person": _svg('<circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/>'),
+    "briefcase": _svg('<rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/>'),
+    "grid": _svg('<rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>'),
+    "search": _svg('<circle cx="11" cy="11" r="6"/><path d="m20 20-3.5-3.5"/>'),
+    "menu": _svg('<path d="M4 6h16M4 12h16M4 18h16"/>'),
 }
 
 
@@ -224,6 +253,9 @@ def logo_html(card: dict) -> str:
     src = favicon_url(card)
     if src:
         return f'<span class="logo"><img class="favicon" src="{src}" width="16" height="16" alt=""></span>'
+    key = card.get("icon") or ""
+    if key in ICONS:
+        return f'<span class="logo">{ICONS[key]}</span>'
     initial = escape(card["name"][:1].upper())
     return f'<span class="logo"><span class="mono">{initial}</span></span>'
 
@@ -232,10 +264,13 @@ def search_bar(label: str) -> str:
     return (
         '    <div class="skills-search">\n'
         f'      <label for="skills-q">{escape(label)}</label>\n'
-        '      <input id="skills-q" type="search" data-skills-search autocomplete="off" maxlength="200">\n'
+        '      <div class="search-field">\n'
+        f'        {ICONS["search"]}\n'
+        '        <input id="skills-q" type="search" data-skills-search autocomplete="off" maxlength="200">\n'
+        "      </div>\n"
         '      <p class="search-count" data-search-count></p>\n'
-        '      <p data-empty>No skills or cards match that search.</p>\n'
-        '    </div>'
+        "      <p data-empty>No skills or cards match that search.</p>\n"
+        "    </div>"
     )
 
 
@@ -457,15 +492,17 @@ def build_business_it() -> None:
 
 
 def build_hire() -> None:
+    mail = ICONS["mail"]
     main = f"""  <aside class="avail-banner" data-status="open" aria-live="polite">
     <div>
+      <span class="avail-dot" aria-hidden="true"></span>
       <p data-when="open" style="margin:0"><strong>Availability:</strong> Currently open for 1-2 fixed-scope projects.</p>
       <p data-when="waitlist" style="margin:0"><strong>Availability:</strong> Intake is on a waitlist. New work is not being taken on at this time.</p>
     </div>
   </aside>
   <header class="page-hero">
     <h1>Hire / Work with me</h1>
-    <p>Tell me the work type, budget band, timeline and a short brief. Your mail application opens with a structured message to {EMAIL} — there is no form server.</p>
+    <p>Tell me your name, a subject and what you need. Your mail application opens with a structured message to {EMAIL} — there is no form server.</p>
   </header>
   <section class="section">
     <p class="eyebrow">Engagements</p>
@@ -473,14 +510,17 @@ def build_hire() -> None:
     <p class="sub">I work in clear, written scopes so both sides know what is being delivered.</p>
     <div class="blocks">
       <article class="block">
+        {ICONS["code"]}
         <h3>Custom software and web apps</h3>
         <p>New sites and applications, or a defined improvement to an existing system, with a written scope and delivery plan.</p>
       </article>
       <article class="block">
+        {ICONS["building"]}
         <h3>Small business IT and infrastructure</h3>
         <p>Email and domains, servers, networks, backups, hardening and fixed-scope support for organisations in Australia.</p>
       </article>
       <article class="block">
+        {ICONS["nodes"]}
         <h3>Protocols, RPC, crypto and commerce</h3>
         <p>APIs and integrations, checkout and subscriptions, and on-chain settlement where a product genuinely needs it.</p>
       </article>
@@ -489,40 +529,15 @@ def build_hire() -> None:
   <section class="section" id="enquiry">
     <p class="eyebrow">Enquiry</p>
     <h2>Structured project enquiry</h2>
-    <p class="sub">Required fields keep the first message useful. When you submit, your email app opens with the work type, budget band, timeline and brief already filled in.</p>
+    <p class="sub">When you submit, your email app opens with the subject and message already filled in.</p>
     <form class="hire-form" id="hire-enquiry" action="mailto:{EMAIL}" method="post" enctype="text/plain">
       <label>Name (required)<input name="name" autocomplete="name" maxlength="100" required></label>
       <label>Email (required)<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
-      <label>Work type (required)
-        <select name="work_type" required>
-          <option value="">Select a work type</option>
-          <option>Custom software and web apps</option>
-          <option>Small business IT and infrastructure</option>
-          <option>Protocols, RPC, crypto and commerce</option>
-        </select>
-      </label>
-      <label>Budget band, AUD (required)
-        <select name="budget" required>
-          <option value="">Select a budget band</option>
-          <option>Under $3,000 AUD</option>
-          <option>$3,000-$8,000 AUD</option>
-          <option>$8,000-$20,000 AUD</option>
-          <option>$20,000+ AUD</option>
-          <option>Budget to be confirmed in writing</option>
-        </select>
-      </label>
-      <label>Timeline (required)
-        <select name="timeline" required>
-          <option value="">Select a timeline</option>
-          <option>Within 2 weeks</option>
-          <option>2-6 weeks</option>
-          <option>1-3 months</option>
-          <option>Flexible</option>
-        </select>
-      </label>
-      <label>Project brief (required)<textarea name="brief" rows="7" maxlength="4000" required></textarea></label>
+      <label>Subject (required)<input name="subject" maxlength="200" required></label>
+      <label>What you need (required)<textarea name="need" rows="7" maxlength="4000" required></textarea></label>
       <div hidden><label>Company<input name="website_hp" tabindex="-1" autocomplete="off"></label></div>
-      <div><button class="btn" type="submit">Open email enquiry</button></div>
+      <p class="form-note">Replies are sent to the email you enter, from {EMAIL}.</p>
+      <div><button class="btn" type="submit">{mail}Send</button></div>
       <p class="form-msg" data-form-msg role="status" aria-live="polite"></p>
     </form>
   </section>"""
@@ -628,60 +643,92 @@ def rebuild_search_index() -> None:
     print("search-index docs", len(docs))
 
 
+ABOUT_EXACT = (
+    "Rohan Martin Kells is an independent developer in Australia. "
+    "He designs, builds and operates self-hosted, zero-dependency web and infrastructure software. "
+    "This site is his public professional profile and resume. "
+    "For professional enquiries, email "
+)
+
+ABOUT_HTML = (
+    ABOUT_EXACT
+    + '<a href="mailto:support@rohankells.com">support@rohankells.com</a>.'
+)
+
+
 def apply_chrome_to_existing() -> None:
-    nav_re = re.compile(r'<nav class="rk-nav" aria-label="Primary">.*?</nav>', re.S)
-    x_host = "x" + ".com"
-    handle = "site" + "handle"
-    x_re = re.compile(r'\s*<a href="https://' + re.escape(x_host + "/" + handle) + r'"[^>]*>.*?</a>', re.S)
+    header_re = re.compile(r'<header class="rk-top">.*?</header>', re.S)
+    footer_re = re.compile(r'<footer class="rk-foot">.*?</footer>', re.S)
     theme_re = re.compile(r'<meta name="theme-color" content="[^"]*"(?: media="[^"]*")?>')
-    same_re = re.compile(r',"https://' + re.escape(x_host + "/" + handle) + r'"')
-    footer_site_re = re.compile(
-        r'(<p class="brand-f" style="font-size:1rem">Site</p>\s*<ul>)(.*?)(</ul>)',
-        re.S,
-    )
-    new_site_list = (
-        '\n          <li><a href="/skills/">Skills</a></li>\n'
-        '          <li><a href="/capabilities/">Capabilities</a></li>\n'
-        '          <li><a href="/business-it/">Business IT</a></li>\n'
-        '          <li><a href="/hire/">Hire</a></li>\n'
-        '          <li><a href="/about/">About</a></li>\n'
-        '          <li><a href="/resume/">Resume</a></li>\n'
-        '          <li><a href="/contact/">Contact</a></li>\n        '
-    )
     skip_dirs = {"skills", "capabilities", "business-it", "hire"}
-    for p in ROOT.rglob("*.html"):
-        if ".git" in p.parts:
+    for pth in ROOT.rglob("*.html"):
+        if ".git" in pth.parts:
             continue
-        rel = p.relative_to(ROOT)
+        rel = pth.relative_to(ROOT)
         if rel.parts and rel.parts[0] in skip_dirs:
             continue
-        text = p.read_text(encoding="utf-8")
+        text = pth.read_text(encoding="utf-8")
         orig = text
         current = None
-        if p == ROOT / "about" / "index.html":
-            current = "about"
-        elif p == ROOT / "contact" / "index.html":
-            current = "contact"
-        text = nav_re.sub(nav_html(current), text, count=1)
-        text = x_re.sub("", text)
-        text = same_re.sub("", text)
+        if pth == ROOT / "resume" / "index.html":
+            current = "resume"
+        text = header_re.sub(header_html(current), text, count=1)
+        text = footer_re.sub(footer_html(), text, count=1)
+        x_host = "x" + ".com"
+        handle = "site" + "handle"
         text = text.replace("https://" + x_host + "/" + handle, "")
         text = text.replace("@" + handle, "")
         text = theme_re.sub(theme_tags(), text, count=1)
-        text = footer_site_re.sub(r"\1" + new_site_list + r"\3", text, count=1)
         if text != orig:
-            p.write_text(text, encoding="utf-8")
+            pth.write_text(text, encoding="utf-8")
             print("chrome", rel)
+
+
+def _strip_n8(text: str) -> str:
+    text = text.replace(", and is the founder and CEO of N8", "")
+    text = text.replace(", and the founder and CEO of N8", "")
+    text = text.replace(" I am an independent developer in Australia, and the founder and CEO of N8. I build self-hosted, zero-dependency web and infrastructure software.", " Rohan Martin Kells is an independent developer in Australia. He designs, builds and operates self-hosted, zero-dependency web and infrastructure software.")
+    text = text.replace("Developer, and founder and CEO of N8", "Independent developer")
+    text = text.replace(" Founder and CEO of N8.", "")
+    return text
+
+
+def patch_about_and_n8() -> None:
+    about = ROOT / "about" / "index.html"
+    t_about = about.read_text(encoding="utf-8")
+    t_about = _strip_n8(t_about)
+    old_lead = (
+        '<p class="lead">Rohan Martin Kells is an independent developer in Australia. '
+        "He designs, builds and operates self-hosted, zero-dependency web and infrastructure software.</p>\n"
+        "        <p>The work covers web platforms, cloud infrastructure, networking, telecommunications, automation and interface design. This site is his public professional profile and resume.</p>\n"
+        '        <p>For professional enquiries, email <a href="mailto:support@rohankells.com">support@rohankells.com</a>.</p>'
+    )
+    new_lead = f'<p class="lead">{ABOUT_HTML}</p>'
+    # after N8 strip the first paragraph may already lack the founder clause
+    if old_lead in t_about:
+        t_about = t_about.replace(old_lead, new_lead, 1)
+    elif 'founder and CEO' not in t_about and ABOUT_EXACT.split(".")[0] in t_about:
+        # try a looser replace of the about-copy paragraphs
+        import re as _re
+        t_about = _re.sub(
+            r'<p class="lead">.*?</p>\s*<p>The work covers.*?</p>\s*<p>For professional enquiries, email <a href="mailto:support@rohankells.com">support@rohankells.com</a>.</p>',
+            new_lead,
+            t_about,
+            count=1,
+            flags=_re.S,
+        )
+    about.write_text(t_about, encoding="utf-8")
+    print("patched about")
 
 
 def patch_home_and_resume() -> None:
     index = ROOT / "index.html"
-    t = index.read_text(encoding="utf-8")
-    t = t.replace(
+    t_home = _strip_n8(index.read_text(encoding="utf-8"))
+    t_home = t_home.replace(
         """    <div class="hero-cta">
-      <a class="btn" href="#sites">Public work</a>
-      <a class="btn btn-ghost" href="/resume/">Resume</a>
-      <a class="btn btn-ghost" href="/contact/">Contact</a>
+      <a class="btn" href="/hire/">Hire me</a>
+      <a class="btn btn-ghost" href="/skills/">Skills</a>
+      <a class="btn btn-ghost" href="/business-it/">Business IT</a>
     </div>""",
         """    <div class="hero-cta">
       <a class="btn" href="/hire/">Hire me</a>
@@ -689,52 +736,47 @@ def patch_home_and_resume() -> None:
       <a class="btn btn-ghost" href="/business-it/">Business IT</a>
     </div>""",
     )
-    t = t.replace(
-        "<h3>Cloud and Cloudflare</h3><p>Deploying and operating services on Cloudflare, including Workers, Pages, DNS and email routing.</p>",
-        "<h3>Systems and infrastructure</h3><p>Deploying and operating servers, DNS, certificates, mail and monitoring, with self-hosted Linux and Windows at the centre.</p>",
+    t_home = t_home.replace(
+        'width="70" height="70"',
+        'width="160" height="160"',
     )
-    old_stack = '<ul class="skills"><li>HTML, CSS and JavaScript</li><li>Python</li><li>Cloudflare Workers and Pages</li><li>DNS and email routing</li><li>Windows and Linux applications</li><li>PayPal checkout</li><li>Automation and scripting</li><li>Interface and brand design</li></ul>'
-    new_stack = (
-        '<ul class="skills"><li>HTML, CSS and JavaScript</li><li>Python</li><li>Node.js</li>'
-        "<li>SQLite</li><li>DNS and email routing</li><li>Windows and Linux</li>"
-        "<li>Automation and scripting</li><li>Interface and brand design</li></ul>\n"
-        '    <p class="eyebrow" style="margin-top:20px">Supporting infrastructure tools</p>\n'
-        '    <ul class="skills support"><li>Cloudflare Workers, Pages and DNS</li><li>Azure</li><li>AWS</li><li>PayPal checkout</li></ul>'
+    t_home = t_home.replace(
+        '<p class="sub">I am an independent developer in Australia. I build self-hosted, zero-dependency web and infrastructure software, and I keep the stack I ship under my own control.</p>',
+        f'<p class="sub">{ABOUT_HTML}</p>',
     )
-    t = t.replace(old_stack, new_stack)
-    if 'id="engage"' not in t:
-        engage = """
-  <section class="section" id="engage">
-    <p class="eyebrow">Work with me</p>
-    <h2>How to hire</h2>
-    <p class="sub">Fixed-scope software, small business IT in Australia, and infrastructure work. Availability is stated on the hire page so I do not take on more than I can handle.</p>
-    <div class="blocks">
-      <a class="cap-card" href="/skills/">
-        <h3>Skills</h3>
-        <p>Browse core engineering skills and individual cards, including supporting platforms.</p>
-      </a>
-      <a class="cap-card" href="/business-it/">
-        <h3>Business IT</h3>
-        <p>Email, domains, servers, backups, hardening and support for organisations in Australia.</p>
-      </a>
-      <a class="cap-card" href="/hire/">
-        <h3>Hire</h3>
-        <p>Send a structured enquiry with work type, budget band, timeline and brief.</p>
-      </a>
-    </div>
-  </section>
-"""
-        t = t.replace('<hr class="gold-rule">\n', '<hr class="gold-rule">\n' + engage, 1)
-    index.write_text(t, encoding="utf-8")
+    t_home = t_home.replace(
+        """  <li>
+    <p class="role">Current</p>
+    <h3>Founder and CEO, N8</h3>
+    <p>I founded and lead N8, based in Australia. The work covers technology, development and related interests in markets and AI.</p>
+  </li>
+  <li>
+    <p class="role">Independent work</p>
+    <h3>Developer</h3>""",
+        """  <li>
+    <p class="role">Independent work</p>
+    <h3>Developer</h3>""",
+    )
+    t_home = t_home.replace(
+        '<p class="lead">Rohan Martin Kells is an independent developer in Australia. He designs, builds and operates self-hosted, zero-dependency web and infrastructure software.</p>',
+        f'<p class="lead">{ABOUT_HTML}</p>',
+    )
+    t_home = t_home.replace(
+        "<p>Send a structured enquiry with work type, budget band, timeline and brief.</p>",
+        "<p>Send a structured enquiry with your name, a subject and what you need.</p>",
+    )
+    index.write_text(t_home, encoding="utf-8")
     print("patched home")
 
     resume = ROOT / "resume" / "index.html"
-    r = resume.read_text(encoding="utf-8")
+    r = _strip_n8(resume.read_text(encoding="utf-8"))
+    r = r.replace('width="82" height="82"', 'width="112" height="112"')
     r = r.replace(
-        "<h3>Cloud and Cloudflare</h3><p>Deploying and operating services on Cloudflare, including Workers, Pages, DNS and email routing.</p>",
-        "<h3>Systems and infrastructure</h3><p>Deploying and operating servers, DNS, certificates, mail and monitoring, with self-hosted Linux and Windows at the centre.</p>",
+        """    <h3>Founder and CEO, N8</h3>
+    <p>I founded and lead N8, based in Australia. The work covers technology, development and related interests in markets and AI.</p>
+""",
+        "",
     )
-    r = r.replace(old_stack, new_stack)
     resume.write_text(r, encoding="utf-8")
     print("patched resume")
 
@@ -752,6 +794,7 @@ def main() -> None:
     build_hire()
     apply_chrome_to_existing()
     patch_home_and_resume()
+    patch_about_and_n8()
     build_sitemap(data)
     rebuild_search_index()
     legacy = FAV_DIR / ("x" + ".png")
