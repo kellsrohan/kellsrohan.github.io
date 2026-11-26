@@ -239,6 +239,7 @@ ICONS = {
     "wallet": _svg('<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 10h18M16 13h3"/>'),
     "cluster": _svg('<circle cx="6" cy="8" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="6" cy="16" r="2.5"/><circle cx="18" cy="16" r="2.5"/><path d="M8.5 8h7M6 10.5v3M18 10.5v3"/>'),
     "chain": _svg('<path d="M10 13a4 4 0 0 1 0-6l3-3a4 4 0 0 1 6 6l-1.5 1.5M14 11a4 4 0 0 1 0 6l-3 3a4 4 0 0 1-6-6L6.5 14.5"/>'),
+    "cycle": _svg('<path d="M4 12a8 8 0 0 1 14-4M18 4v4h-4M20 12a8 8 0 0 1-14 4M6 20v-4h4"/>'),
     "script": _svg('<path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3M9 12h6M9 16h4"/>'),
     "building": _svg('<path d="M4 20V6l8-3 8 3v14H4zM9 20v-6h6v6M9 9h.01M15 9h.01M12 9h.01"/>'),
     "person": _svg('<circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/>'),

@@ -75,6 +75,28 @@
           "icon": "braces"
         },
         {
+          "slug": "apps-script",
+          "name": "Apps Script",
+          "summary": "Google Apps Script automation for Google Sheets, Gmail, Drive, triggers, and Workspace tools.",
+          "keywords": [
+            "google apps script",
+            "apps script",
+            "google sheets",
+            "gmail",
+            "drive",
+            "triggers",
+            "workspace"
+          ],
+          "what": "I write Google Apps Script to automate Sheets, Gmail, Drive and other Workspace tools, including triggers and the surrounding workflow work.",
+          "related": [
+            "automation",
+            "javascript",
+            "webhooks",
+            "html"
+          ],
+          "favicon": "apps-script"
+        },
+        {
           "slug": "nodejs",
           "name": "Node.js",
           "summary": "JavaScript on the server for web apps, APIs and local tooling.",
@@ -416,6 +438,27 @@
           "favicon": "docker"
         },
         {
+          "slug": "vmware",
+          "name": "VMware",
+          "summary": "ESXi, vSphere, virtual machines, hypervisor setup, and host administration.",
+          "keywords": [
+            "vmware",
+            "esxi",
+            "vsphere",
+            "virtual machines",
+            "hypervisor",
+            "host administration"
+          ],
+          "what": "I set up and administer VMware hosts and virtual machines: ESXi and vSphere, hypervisor setup, and the day-to-day work of keeping guests running.",
+          "related": [
+            "linux",
+            "debian",
+            "docker",
+            "windows-servers"
+          ],
+          "favicon": "vmware"
+        },
+        {
           "slug": "windows-servers",
           "name": "Windows servers",
           "summary": "Windows hosts for business applications, file services and local networks.",
@@ -489,6 +532,28 @@
             "windows-servers"
           ],
           "favicon": "powershell"
+        },
+        {
+          "slug": "automation",
+          "name": "Automation",
+          "summary": "Workflow automation, scheduled tasks, scripting, API pipelines, and repeatable operations.",
+          "keywords": [
+            "automation",
+            "workflows",
+            "scheduled tasks",
+            "scripting",
+            "api pipelines",
+            "operations"
+          ],
+          "what": "I design and build automation for repeatable operations: scheduled tasks, scripts, API pipelines and workflows that cut down routine manual work.",
+          "related": [
+            "powershell",
+            "windows-automation",
+            "apps-script",
+            "automated-backups",
+            "webhooks"
+          ],
+          "icon": "cycle"
         },
         {
           "slug": "dns",
@@ -805,6 +870,27 @@
             "crypto-wallets"
           ],
           "icon": "checkout"
+        },
+        {
+          "slug": "shopify",
+          "name": "Shopify",
+          "summary": "Shopify storefronts, themes, custom apps, checkout flows, and store integrations.",
+          "keywords": [
+            "shopify",
+            "storefronts",
+            "themes",
+            "custom apps",
+            "checkout",
+            "integrations"
+          ],
+          "what": "I work on Shopify storefronts, themes, custom apps, checkout flows and store integrations, including the surrounding webhooks and payment work.",
+          "related": [
+            "fiat-checkout",
+            "webhooks",
+            "rest",
+            "html"
+          ],
+          "favicon": "shopify"
         },
         {
           "slug": "crypto-wallets",
