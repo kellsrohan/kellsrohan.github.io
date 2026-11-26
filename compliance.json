@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "status": "template",
+  "chosenAt": null,
+  "chosenBy": null,
+  "dashboardNote": "not yet chosen",
+  "operator": {
+    "legalName": "Rohan Kells",
+    "entityType": "sole_trader",
+    "tradingStyle": "Building connected digital systems.",
+    "registeredBusinessName": null,
+    "acn": null
+  },
+  "abn": {
+    "mode": "template",
+    "value": null,
+    "formatted": null,
+    "verified": false,
+    "source": null,
+    "verifyUrl": null
+  },
+  "gstRegistered": false,
+  "privacy": {
+    "mode": "template",
+    "source": {
+      "type": "template",
+      "path": null,
+      "text": null
+    },
+    "lastUpdated": "2026-11-24"
+  },
+  "terms": {
+    "mode": "template",
+    "source": {
+      "type": "template",
+      "path": null,
+      "text": null
+    },
+    "lastUpdated": "2026-11-24"
+  },
+  "pricingDisclaimer": {
+    "mode": "template",
+    "source": {
+      "type": "template",
+      "path": null,
+      "text": null
+    }
+  },
+  "emailCompliance": {
+    "mode": "template",
+    "doubleOptIn": true,
+    "senderIdentification": true,
+    "oneClickUnsubscribe": true,
+    "preferenceCentre": true,
+    "noPreTickedConsent": true
+  },
+  "region": "Central Coast",
+  "notes": "ABN is not published on rohankells.com."
+}

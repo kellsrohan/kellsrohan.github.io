@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rohankells.com/sitemap.xml

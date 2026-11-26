@@ -1,0 +1,28 @@
+/* Legal block, legal pages, preference centre and ACL price component.
+   Matches Network Connect and the shared Sites Preview design system (ds-1.0). */
+.nc-legal-block, .nc-legal-page, .nc-legal-main { font-size: inherit; line-height: 1.55; max-width: 72rem; }
+.nc-legal-block { width: 100%; margin: 0.75rem 0; color: inherit; }
+.nc-legal-block p { margin: 0.25rem 0; }
+.nc-legal-block .nc-legal-entity p { max-width: 48rem; }
+.nc-legal-block a, .nc-legal-page a { text-decoration: underline; text-underline-offset: 2px; }
+.nc-legal-block .nc-gst, .nc-price-gst { font-size: 0.95em; }
+.nc-legal-links { margin-top: 0.35rem; }
+.nc-legal-main { padding: 1.5rem 1.25rem 3rem; }
+.nc-legal-head h1 { line-height: 1.2; margin: 0 0 0.5rem; font-weight: 700; }
+.nc-legal-updated { color: inherit; opacity: 0.8; font-size: 0.95em; margin-top: 0.5rem; }
+.nc-legal-toc ul { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; padding: 0; list-style: none; margin: 1rem 0 1.5rem; }
+.nc-legal-section { margin: 1.75rem 0; }
+.nc-legal-section h2 { font-weight: 700; line-height: 1.25; margin: 0 0 0.6rem; }
+.nc-legal-page ul { padding-left: 1.25rem; }
+.nc-pref-form fieldset { border: 1px solid currentColor; border-radius: 10px; margin: 1rem 0; padding: 0.75rem 1rem; }
+.nc-pref-form label { display: block; margin: 0.35rem 0; }
+.nc-price[data-acl-price] { display: grid; gap: 0.35rem; }
+.nc-price-total { font-size: 1.25em; font-weight: 700; line-height: 1.2; }
+.nc-price-breakdown { font-size: 0.95em; }
+.nc-price-acl, .nc-price-est, .nc-price-gst { font-size: 0.9em; margin: 0; }
+@media print {
+  .nc-legal-toc { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nc-legal-block, .nc-legal-page { transition: none; }
+}

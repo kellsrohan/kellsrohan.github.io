@@ -1,0 +1,47 @@
+{
+ "ds_version": "1.0",
+ "scheme_default": "dark",
+ "mood": "editorial",
+ "fonts": {
+  "head": "source-serif-4",
+  "body": "ibm-plex-sans",
+  "eyebrow": "ibm-plex-sans"
+ },
+ "hue": 31.6,
+ "category": "rohankells",
+ "purpose": "Real site upgraded: developer portfolio",
+ "dark_accent": "#E8D0A0",
+ "primary": "#C9A36A",
+ "accent": "#C9A36A",
+ "dark_primary": "#C9A36A",
+ "surface": "#ffffff",
+ "text": "#0f172a",
+ "restrained": false,
+ "contrast_pass": true,
+ "contrast_light": {
+  "--text/--surface": 17.85,
+  "--text-2/--surface": 10.35,
+  "--muted/--surface": 7.58,
+  "--muted/--surface-2": 7.35,
+  "--primary/--surface": 5.3,
+  "--primary/--surface-2": 5.14,
+  "--primary/--soft": 4.69,
+  "--on-primary/--primary": 5.3,
+  "--accent/--surface": 4.92,
+  "--text/--soft": 15.81,
+  "on-primary/accent(graphic 3:1)": 4.92
+ },
+ "contrast_dark": {
+  "--text/--surface": 14.87,
+  "--text-2/--surface": 12.4,
+  "--muted/--surface": 8.13,
+  "--muted/--surface-2": 7.25,
+  "--primary/--surface": 7.65,
+  "--primary/--surface-2": 6.82,
+  "--primary/--soft": 5.87,
+  "--on-primary/--primary": 7.86,
+  "--accent/--surface": 14.47,
+  "--text/--soft": 11.42,
+  "on-primary/accent(graphic 3:1)": 14.87
+ }
+}

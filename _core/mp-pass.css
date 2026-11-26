@@ -1,0 +1,76 @@
+/* ==== mobile-pass 1.0 (25 Nov 2026) — shared mobile layout, centred icon steps/cards, quote button, stepped form cards. Created by Rohan Kells. Icons: Lucide (ISC). ==== */
+:root{--mp-a:var(--primary,var(--nc-blue,#1d4ed8));--mp-line:var(--line,var(--nc-border,#d0d7e2));--mp-bg:var(--surface,var(--nc-bg,#fff));--mp-soft:var(--soft,var(--nc-surface,#eef2f7));--mp-muted:var(--muted,var(--nc-muted,#5b6472));--mp-on:var(--on-primary,#fff);--mp-r:var(--r-lg,12px);--mp-rs:var(--r-md,10px)}
+.mp-off{display:none!important}
+/* centred icon pattern (source: NC services/seo .process-timeline .tl-step): number/icon centred above heading + text */
+.mp-ico{display:block;margin:10px auto 6px;color:var(--mp-a);line-height:0}.mp-ico svg{width:26px;height:26px}
+.steps.mp-steps{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.steps.mp-steps>li{text-align:center;padding:16px 12px}
+.steps.mp-steps>li:before{display:grid;margin:0 auto;width:44px;height:44px;border-radius:50%;border:2px solid var(--mp-a);color:var(--mp-a);background:var(--mp-bg);font-size:15px}
+.mp-ic{text-align:center}.mp-ic>:first-child{margin-left:auto!important;margin-right:auto!important}
+.mp-ic.card,.mp-ic[class*=card]{align-items:center}
+.mp-ic ul,.mp-ic ol{text-align:left}
+.mp-ic .more,.mp-ic .package-link{align-self:center;justify-content:center}
+.process-timeline .tl-step h3>svg{display:none}
+@media(max-width:860px){.process-timeline .timeline{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:16px}.process-timeline .timeline::before{display:none}.process-timeline .tl-step{display:block;text-align:center;padding:8px 6px}.process-timeline .tl-step .tl-ico{margin:10px auto 4px}.process-timeline .tl-step h3{margin-top:4px}}
+/* Get a quote button (header, every viewport) */
+.mp-quote{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 14px;border-radius:var(--mp-rs);background:var(--mp-a);color:var(--mp-on)!important;font-weight:700;font-size:14px;line-height:1.1;text-decoration:none!important;white-space:nowrap;flex:none;border:0}
+.mp-quote:hover{filter:brightness(1.08)}.mp-quote:focus-visible{outline:3px solid var(--mp-a);outline-offset:2px}
+.mp-quote svg{width:18px;height:18px;flex:none}
+@media(max-width:560px){.mp-qhost{flex-wrap:wrap!important}.mp-qhost>.brand{flex:1 1 0;min-width:0}.mp-quote{order:99;flex:1 1 100%;margin:4px 0 2px}}
+/* footer accordion (<=768px). Without JS every group stays open. */
+.mp-fbtn{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;gap:8px;font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit}
+.mp-fbtn .mp-chev{display:none;width:18px;height:18px;margin-left:auto;transition:transform .2s}
+@media(min-width:769px){.mp-fbtn{pointer-events:none}}
+@media(max-width:768px){
+ footer .foot-in,footer .nc-footer-grid{grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+ footer .mp-fgroup{border-top:1px solid var(--mp-line);padding:0!important;margin:0!important}
+ footer .mp-fgroup>h2,footer .mp-fgroup>h3{margin:0!important}
+ .mp-fbtn{display:flex;width:100%;min-height:48px;cursor:pointer;justify-content:flex-start}
+ .mp-fbtn .mp-chev{display:block}.mp-fbtn[aria-expanded=true] .mp-chev{transform:rotate(180deg)}
+ .mp-fbtn:focus-visible{outline:2px solid var(--mp-a);outline-offset:2px;border-radius:6px}
+ .mp-fpanel{padding-bottom:10px!important}.mp-fpanel.mp-closed{display:none!important}
+ footer ul li a,footer nav a,footer .foot-bar a,footer .foot-bar button,footer .nc-footer-social a,footer .linkbtn{display:inline-flex;align-items:center;min-height:44px;min-width:44px}
+ footer ul li{margin:0!important}
+}
+/* nav dropdowns on small screens: full-screen overlay with close + scroll lock (JS); in-flow without JS */
+.mp-ovhead{display:none}
+@media(max-width:768px){
+ html:not(.mp-js) header details.navdrop[open]>.navmenu{position:static!important;max-height:none!important;min-width:0!important}
+ html.mp-js header details[open]>.mp-ov{position:fixed!important;inset:0!important;width:auto!important;min-width:0!important;max-width:none!important;height:100%!important;max-height:none!important;overflow:auto!important;overscroll-behavior:contain;z-index:2147483646!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;align-content:start;gap:4px!important;padding:0 16px calc(24px + env(safe-area-inset-bottom))!important;background:var(--mp-bg)!important}
+ html.mp-js header details[open]>.mp-ov .mp-ovhead{display:flex;position:sticky;top:0;z-index:1;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;margin-bottom:6px;background:var(--mp-bg);border-bottom:1px solid var(--mp-line);font-weight:700;font-size:17px}
+ html.mp-js header details[open]>.mp-ov a{min-height:48px;display:flex;align-items:center}
+ .mp-ovclose{all:unset;box-sizing:border-box;display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--mp-line);border-radius:var(--mp-rs);cursor:pointer;color:inherit}
+ .mp-ovclose svg{width:20px;height:20px}.mp-ovclose:focus-visible{outline:2px solid var(--mp-a);outline-offset:2px}
+}
+html.mp-lock,html.mp-lock body{overflow:hidden!important;touch-action:none}
+html.mp-lock .mp-ov{touch-action:pan-y}
+html.mp-lock .mcta,html.mp-lock .chat-btn,html.mp-lock .nc-chat-btn,html.mp-lock .to-top,html.mp-lock #consent{visibility:hidden!important}
+/* shared-core bug fixes: form consent labels picked up the cookie banner's fixed .consent style; header nav overlapping the brand */
+form label.consent{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;z-index:auto!important;max-width:none!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;font-size:inherit!important}
+html.mp-navcompact header.top nav.main{display:none!important}html.mp-navcompact header.top .mnav{display:block;order:3}html.mp-navcompact header.top .theme-toggle{order:2}html.mp-navcompact header.top .mp-quote{margin-left:auto}
+/* general small-screen fixes */
+@media(max-width:768px){
+ img,video,iframe,canvas{max-width:100%}img,video{height:auto}
+ h1,h2,h3,h4,p,li,dd,dt,td,th,label,a,span,b,small,figcaption,legend,summary{overflow-wrap:break-word}
+ pre{overflow-x:auto;max-width:100%}
+ .brand,.brand>span{min-width:0;max-width:100%}.brand small,.brand b{white-space:normal!important;overflow-wrap:anywhere}
+ main .btn,main button,main summary{min-height:44px}
+ input:not([type=checkbox]):not([type=radio]):not([type=hidden]),select,textarea{font-size:16px!important;min-height:44px}
+ input[type=checkbox],input[type=radio]{min-width:22px;min-height:22px}
+}
+/* form card component (every form; stepped when it does not fit one screen) */
+form.mp-card{border:1px solid var(--mp-line);border-radius:var(--mp-r);padding:16px;background:var(--mp-bg);box-sizing:border-box;scroll-margin-top:calc(var(--mp-top,0px) + 8px)}
+footer form.mp-card,.chat-panel form.mp-card,[role=dialog] form.mp-card{background:transparent}
+.mp-stepbar{grid-column:1/-1;width:100%;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700;color:var(--mp-muted);margin:0 0 4px}
+.mp-prog{flex:1;height:6px;border-radius:3px;background:var(--mp-soft);overflow:hidden}.mp-prog>i{display:block;height:100%;background:var(--mp-a);transition:width .2s}
+.mp-fnav{grid-column:1/-1;width:100%;display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:4px}
+.mp-fnav button{min-height:44px;padding:0 18px;border-radius:var(--mp-rs);font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+.mp-next{background:var(--mp-a);color:var(--mp-on);border:1px solid var(--mp-a);margin-left:auto}
+.mp-back{background:transparent;color:var(--mp-a);border:1px solid var(--mp-line)}
+.mp-fnav button:focus-visible{outline:3px solid var(--mp-a);outline-offset:2px}
+form.mp-card input:not([type=checkbox]):not([type=radio]):not([type=hidden]),form.mp-card select,form.mp-card button,form.mp-card textarea{min-height:44px}
+form.mp-stepped textarea{min-height:88px;max-height:28vh}
+@media(min-width:769px){form.mp-stepped textarea{max-height:22vh}}
+@media(max-height:700px){form.mp-card{padding:12px}form.mp-stepped label{margin-top:0}}
+/* ==== /mobile-pass 1.0 ==== */
+@media (max-width:768px){header .theme-toggle,header summary,header button,header nav.main>a,.nc-footer-social a,footer .social a{min-height:44px;min-width:44px}header nav.main>a{display:inline-flex;align-items:center}}

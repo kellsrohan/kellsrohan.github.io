@@ -1,0 +1,367 @@
+[
+ [
+  "help",
+  "Help centre (search and filter)",
+  "present"
+ ],
+ [
+  "booking",
+  "Booking request",
+  "hidden: off by default (modules.booking in site-config)"
+ ],
+ [
+  "quote",
+  "Request a quote",
+  "present"
+ ],
+ [
+  "calc",
+  "Quote calculator",
+  "hidden: needs a real published price list"
+ ],
+ [
+  "review",
+  "Request a review",
+  "present"
+ ],
+ [
+  "urgent",
+  "Urgent help",
+  "present"
+ ],
+ [
+  "status",
+  "Status page (real checks)",
+  "present"
+ ],
+ [
+  "sla",
+  "Service levels",
+  "hidden: needs real response-time commitments"
+ ],
+ [
+  "portal",
+  "Customer portal",
+  "hidden: needs a real customer account system"
+ ],
+ [
+  "newsletter",
+  "Newsletter sign-up and unsubscribe",
+  "present"
+ ],
+ [
+  "shop",
+  "Shop / order request cart",
+  "hidden: off by default (modules.shop in site-config)"
+ ],
+ [
+  "media",
+  "Media kit",
+  "present"
+ ],
+ [
+  "brochure",
+  "Brochure page and PDF",
+  "present"
+ ],
+ [
+  "careers",
+  "Careers job board (JobPosting schema, apply form, expired roles hide)",
+  "hidden: needs real job listings in site-config jobs (page appears automatically when one is live)"
+ ],
+ [
+  "portfolio",
+  "Portfolio grid with filter chips",
+  "hidden: needs real projects in site-config portfolio (no invented projects)"
+ ],
+ [
+  "referral",
+  "Referral page and /r/<code> links",
+  "hidden: needs written reward terms for this site (codes tool: gen/ref_codes.py)"
+ ],
+ [
+  "a11y-page",
+  "Accessibility statement page",
+  "present"
+ ],
+ [
+  "news",
+  "Blog / news (site updates)",
+  "present (site updates; real posts appear here when added)"
+ ],
+ [
+  "search",
+  "Site search page + header search (Ctrl+K or /)",
+  "present"
+ ],
+ [
+  "resources",
+  "Resource library with filter",
+  "present"
+ ],
+ [
+  "press",
+  "Press alias for the media kit",
+  "present (/press/ points to the media kit)"
+ ],
+ [
+  "cases",
+  "Case studies filtered by industry",
+  "hidden: needs real case studies with an industry (filter appears automatically)"
+ ],
+ [
+  "chat",
+  "Chat panel (messages answered by email)",
+  "present"
+ ],
+ [
+  "chat-live",
+  "Live chat provider",
+  "hidden: needs a live-chat provider account and ID (loads only after cookie consent)"
+ ],
+ [
+  "consent",
+  "Cookie consent banner and settings",
+  "present"
+ ],
+ [
+  "dark",
+  "Light/dark mode toggle",
+  "present"
+ ],
+ [
+  "more",
+  "Header More menu and mobile menu",
+  "present"
+ ],
+ [
+  "crumbs",
+  "Breadcrumbs (with structured data)",
+  "present"
+ ],
+ [
+  "forms",
+  "Form validation, honeypot, success and error states",
+  "present"
+ ],
+ [
+  "cta",
+  "Call-to-action banners",
+  "present"
+ ],
+ [
+  "reveal",
+  "Scroll reveal on sections and cards (once; visible without JS or with reduced motion)",
+  "present"
+ ],
+ [
+  "photo",
+  "Hero photo (licence-checked, responsive)",
+  "present"
+ ],
+ [
+  "seo",
+  "SEO: titles, descriptions, canonical, Open Graph, Twitter, JSON-LD, sitemap, robots, manifest",
+  "present"
+ ],
+ [
+  "email",
+  "Contact email (contact@domain)",
+  "present"
+ ],
+ [
+  "phone",
+  "Phone number",
+  "hidden: needs a real phone number"
+ ],
+ [
+  "social",
+  "Social and WhatsApp links",
+  "hidden: needs real social accounts and a WhatsApp number"
+ ],
+ [
+  "login",
+  "Customer login link",
+  "hidden: needs a real customer login"
+ ],
+ [
+  "beforeafter",
+  "Before-and-after gallery",
+  "hidden: needs real before/after photos and client permission"
+ ],
+ [
+  "partners",
+  "Partners page",
+  "hidden: needs real partner organisations"
+ ],
+ [
+  "admin",
+  "Admin message viewer",
+  "hidden: needs real sign-in (preview hub keeps messages in memory only)"
+ ],
+ [
+  "filter",
+  "Topic filter and search (help centre)",
+  "present"
+ ],
+ [
+  "mcta",
+  "Mobile sticky CTA bar (768px and below, safe-area aware, hides while typing)",
+  "present"
+ ],
+ [
+  "whatsapp",
+  "WhatsApp click-to-chat",
+  "hidden: needs a WhatsApp number in this site's config"
+ ],
+ [
+  "agegate",
+  "18+ age gate (30-day memory, leave option, no tracking)",
+  "hidden: not needed for this site's purpose"
+ ],
+ [
+  "vt",
+  "Page transitions (cross-document View Transitions, 180ms, off with reduced motion)",
+  "present"
+ ],
+ [
+  "updated",
+  "Last updated line and JSON-LD dateModified (from source file date)",
+  "present"
+ ],
+ [
+  "print",
+  "Print stylesheet (A4, black on white, link URLs, site header)",
+  "present"
+ ],
+ [
+  "sitemap",
+  "HTML site map page + sitemap.xml (generated from the same page list, linked in footer)",
+  "present"
+ ],
+ [
+  "e500",
+  "500 error page (served by the preview hub on server errors)",
+  "present"
+ ],
+ [
+  "promos",
+  "Seasonal promo banners (AU holiday calendar preset, date-swapped)",
+  "hidden: needs Rohan to switch a promo on (calendar preset loaded, none active, no discounts)"
+ ],
+ [
+  "gbp",
+  "Google Business Profile card (contact page and footer)",
+  "hidden: needs this site's own Google Business Profile link"
+ ],
+ [
+  "leadform",
+  "Multi-step lead form with 30-day autosave and clear link (no-JS: single form)",
+  "present (request a quote)"
+ ],
+ [
+  "urgent-bar",
+  "Urgent notice bar (overrides promos)",
+  "hidden: needs Rohan to switch it on with a message (site-config urgent_notice, inactive)"
+ ],
+ [
+  "heatmap",
+  "Cookie-free click heat map (no cookies, IDs or IPs; honours DNT/GPC)",
+  "present (off by default; switch on in site-config heatmap)"
+ ],
+ [
+  "answers",
+  "Site-content answer engine in chat (offline BM25 over a build-time index, ask-us handoff, API hook ready)",
+  "present"
+ ],
+ [
+  "spam",
+  "Spam protection on every form (honeypot, 3-second minimum fill time, hub rate limit 5/min, server-side validation)",
+  "present"
+ ],
+ [
+  "turnstile",
+  "Cloudflare Turnstile hook",
+  "hidden: needs a Turnstile site key once the site is live on Cloudflare (hook ready)"
+ ],
+ [
+  "uptime",
+  "Uptime monitoring (nc-uptime Worker, when live)",
+  "hidden: needs the site live on Cloudflare (flag set: monitor when live = yes)"
+ ],
+ [
+  "calendar",
+  "Content calendar (ideas only) + dashboard Calendar panel",
+  "present (6 ideas, nothing scheduled)"
+ ],
+ [
+  "newsletter-doi",
+  "Newsletter double opt-in with consent text (ready for Resend/D1 when live)",
+  "present (preview: confirmation email not sent; needs Resend/D1 when live)"
+ ],
+ [
+  "social",
+  "Social share drafts per new post (_social folder, never auto-posted)",
+  "hidden: needs real posts (drafts are generated automatically for each new post)"
+ ],
+ [
+  "apple-touch",
+  "Apple touch icon and PNG app icons",
+  "present"
+ ],
+ [
+  "i18n",
+  "Language switch (English AU + translate link, hreflang)",
+  "present"
+ ],
+ [
+  "map",
+  "Service-area map (Australia, loads on click; no street address)",
+  "present"
+ ],
+ [
+  "counters",
+  "Animated counters (real site counts only)",
+  "present"
+ ],
+ [
+  "exit",
+  "Exit-intent help prompt (desktop, once per session, no offers)",
+  "present"
+ ],
+ [
+  "shortcuts",
+  "Keyboard shortcuts (/ or Ctrl+K search, ? help, g h home)",
+  "present"
+ ],
+ [
+  "top",
+  "Back-to-top button",
+  "present"
+ ],
+ [
+  "progress",
+  "Reading progress bar",
+  "present"
+ ],
+ [
+  "video",
+  "Client story video",
+  "hidden: needs a real client story video"
+ ],
+ [
+  "timeline-svc",
+  "Services timeline (how it works)",
+  "present"
+ ],
+ [
+  "pay",
+  "Payment links (business's own PayPal/Stripe, from config)",
+  "hidden: none by default (each business adds its own link)"
+ ],
+ [
+  "acl-price",
+  "ACL pricing component (total price incl. GST) + returns page",
+  "hidden: shown with the shop (off by default)"
+ ]
+]

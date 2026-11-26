@@ -1,0 +1,91 @@
+/* Readable titles — shared heading style. Mobile first.
+   Load last, after theme and ds-1.0. Add-only. Does not touch favicons. */
+
+:root {
+  --rt-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* ~33px at 360px wide, never below 28px, cap at 40px */
+  --rt-h1-size: clamp(1.75rem, 0.95rem + 4.5vw, 2.5rem);
+  --rt-h2-size: clamp(1.25rem, 1rem + 1.5vw, 1.75rem);
+  --rt-h3-size: clamp(1.1rem, 0.98rem + 0.8vw, 1.375rem);
+}
+
+h1, h2, h3,
+.hero h1, .hero h2, .hero h3,
+.hero-title, .page-title, .ak-h1, .ak-settings h1, .ak-wizard-sheet h2 {
+  font-family: var(--font-head, var(--rt-font)), var(--rt-font);
+  font-style: normal;
+  letter-spacing: 0;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: manual;
+  max-width: 100%;
+}
+
+h1, .hero h1, .hero-title, .page-title, .ak-h1, .ak-settings h1 {
+  font-weight: 800;
+  font-size: var(--rt-h1-size);
+  line-height: 1.2;
+  max-width: 20ch;
+}
+
+h2, .hero h2, .ak-wizard-sheet h2, .ak-section h2, .band h2 {
+  font-weight: 700;
+  font-size: var(--rt-h2-size);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h3, .hero h3, .card h3 {
+  font-weight: 700;
+  font-size: var(--rt-h3-size);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+/* Compact UI headings stay smaller, still bold and untracked */
+.foot-in h2, .panel h2, .chat-head h2 {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+  max-width: none;
+}
+
+h1, h2, h3, .hero h1, .hero-title, .ak-h1 {
+  font-stretch: normal;
+  -webkit-text-stroke: 0;
+}
+
+/* No all-caps body paragraphs */
+p, li, dd, dt, figcaption {
+  text-transform: none;
+}
+
+/* Headings drawn over a background image get a dark scrim so contrast holds */
+.hero[style*="background-image"],
+.hero-photo,
+[class*="hero"][style*="background-image"] {
+  position: relative;
+  isolation: isolate;
+}
+.hero[style*="background-image"]::before,
+[class*="hero"][style*="background-image"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.32));
+}
+.hero[style*="background-image"] > *,
+[class*="hero"][style*="background-image"] > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 720px) {
+  h1, .hero h1, .hero-title, .page-title, .ak-h1, .ak-settings h1 {
+    line-height: 1.15;
+  }
+}

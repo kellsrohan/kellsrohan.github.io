@@ -1,0 +1,32 @@
+{
+ "domain": "rohankells.com",
+ "category": "rohankells",
+ "purpose": "Real site upgraded: developer portfolio",
+ "mood": "editorial",
+ "scheme_default": "dark",
+ "hue": 31.6,
+ "seed": "#f39833",
+ "exact_brand": true,
+ "restrained": false,
+ "fonts": {
+  "head": "source-serif-4",
+  "body": "ibm-plex-sans",
+  "eyebrow": "ibm-plex-sans"
+ },
+ "heading": {
+  "weight": 600,
+  "tracking": "-0.015em",
+  "h1_max_px": 60
+ },
+ "radius": "sharp",
+ "shadow": "flat",
+ "pattern": {
+  "type": "diagonal",
+  "size_px": 14,
+  "opacity": 0.06
+ },
+ "hero": "center",
+ "cards": "left",
+ "tile": "soft",
+ "ds_version": "1.0"
+}

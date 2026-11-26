@@ -1,0 +1,11 @@
+/* Mobile QA add-on (2026-11-26). Created by Rohan Kells. Complements ds-1.0 and mp-pass. */
+html{overflow-x:clip;-webkit-text-size-adjust:100%}
+body{overflow-x:clip;max-width:100%}
+img,video,canvas,iframe{max-width:100%;height:auto}
+svg:not(.ico){max-width:100%}
+pre,table,.tbl{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:768px){
+  html{font-size:16px}
+  input:not([type=checkbox]):not([type=radio]):not([type=hidden]),select,textarea,button,.btn,header a,header summary,footer nav a,nav.main a,.mnav>summary,.theme-toggle,.icon-btn{min-height:44px}
+  .mnav>summary,.theme-toggle,.icon-btn{min-width:44px}
+}
