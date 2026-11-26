@@ -30,6 +30,7 @@
   <url><loc>https://rohankells.com/newsletter/</loc></url>
   <url><loc>https://rohankells.com/newsletter-confirm/</loc></url>
   <url><loc>https://rohankells.com/press/</loc></url>
+  <url><loc>https://rohankells.com/pricing/</loc></url>
   <url><loc>https://rohankells.com/privacy/</loc></url>
   <url><loc>https://rohankells.com/products/</loc></url>
   <url><loc>https://rohankells.com/projects/</loc></url>
@@ -75,6 +76,7 @@
   <url><loc>https://rohankells.com/skills/infrastructure/dns/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/docker/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/email-deliverability/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/encryption-pgp/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/google-cloud/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/google-workspace/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/incident-response/</loc></url>
@@ -84,6 +86,7 @@
   <url><loc>https://rohankells.com/skills/infrastructure/microsoft-365/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/networking-fundamentals/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/powershell/</loc></url>
+  <url><loc>https://rohankells.com/skills/infrastructure/quoting-invoicing/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/reverse-proxies/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/tls-acme/</loc></url>
   <url><loc>https://rohankells.com/skills/infrastructure/ubuntu/</loc></url>
@@ -112,6 +115,7 @@
   <url><loc>https://rohankells.com/skills/protocols-commerce-crypto/webhooks/</loc></url>
   <url><loc>https://rohankells.com/skills/protocols-commerce-crypto/websockets/</loc></url>
   <url><loc>https://rohankells.com/skills/protocols-commerce-crypto/woocommerce/</loc></url>
+  <url><loc>https://rohankells.com/skills/web-and-app-engineering/accessibility/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/apps-script/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/css/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/digital-marketing/</loc></url>
@@ -125,6 +129,7 @@
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/responsive-ui/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/seo/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/site-architecture/</loc></url>
+  <url><loc>https://rohankells.com/skills/web-and-app-engineering/testing-qa/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/typescript/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/visual-studio/</loc></url>
   <url><loc>https://rohankells.com/skills/web-and-app-engineering/website-migrations/</loc></url>

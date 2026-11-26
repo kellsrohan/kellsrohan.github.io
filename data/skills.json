@@ -95,6 +95,26 @@
           "favicon": "typescript"
         },
         {
+          "slug": "testing-qa",
+          "name": "Testing & QA",
+          "summary": "Practical testing and quality checks for web applications and sites: test plans, regression checks, and catching breaks before a release.",
+          "keywords": [
+            "testing",
+            "qa",
+            "quality assurance",
+            "regression",
+            "test plans"
+          ],
+          "what": "I write and run practical tests around the parts of a site or application that actually change: forms, critical paths, and regressions after a release or migration. The work stays proportionate to the size of the job, with notes your team can repeat.",
+          "related": [
+            "javascript",
+            "html",
+            "github",
+            "website-migrations"
+          ],
+          "level": "Working"
+        },
+        {
           "slug": "apps-script",
           "name": "Apps Script",
           "summary": "Google Apps Script automation for Google Sheets, Gmail, Drive, triggers, and Workspace tools.",
@@ -177,6 +197,26 @@
             "javascript"
           ],
           "icon": "devices"
+        },
+        {
+          "slug": "accessibility",
+          "name": "Accessibility",
+          "summary": "Accessibility work for websites and web apps: semantic structure, keyboard use, labels, contrast and practical checks against common barriers.",
+          "keywords": [
+            "accessibility",
+            "a11y",
+            "wcag",
+            "keyboard",
+            "screen readers",
+            "contrast"
+          ],
+          "what": "I improve the accessibility of websites and web applications with semantic HTML, usable keyboard paths, form labels, and contrast that holds up in light and dark themes. I check the pages people actually use and leave notes so the standard can be kept after the engagement.",
+          "related": [
+            "html",
+            "css",
+            "responsive-ui"
+          ],
+          "level": "Working"
         },
         {
           "slug": "embedding",
@@ -900,6 +940,26 @@
           "favicon": "xero"
         },
         {
+          "slug": "quoting-invoicing",
+          "name": "Quoting & Invoicing",
+          "summary": "Written quotes, invoices and payment terms for professional work, including Xero-based invoicing where that is the bookkeeping tool.",
+          "keywords": [
+            "quoting",
+            "invoicing",
+            "quotes",
+            "invoices",
+            "payment terms",
+            "xero invoicing"
+          ],
+          "what": "I set up a clear path from a written quote to an invoice and recorded payment, including payment terms a small organisation can actually follow. Where Xero is the bookkeeping tool I use it for invoices and the surrounding workflow; the same discipline applies if invoices are issued another way.",
+          "related": [
+            "xero",
+            "csv-pdf",
+            "business-it"
+          ],
+          "level": "Working"
+        },
+        {
           "slug": "microsoft-365",
           "name": "Microsoft 365",
           "level": "Advanced",
@@ -1092,6 +1152,26 @@
             "linux"
           ],
           "icon": "lock"
+        },
+        {
+          "slug": "encryption-pgp",
+          "name": "Encryption & PGP",
+          "summary": "Practical encryption for mail, files and hosts, including OpenPGP where a team already uses it, alongside HTTPS already covered under TLS.",
+          "keywords": [
+            "encryption",
+            "pgp",
+            "openpgp",
+            "gpg",
+            "at rest",
+            "mail encryption"
+          ],
+          "what": "I help teams use encryption in the places it actually protects them: OpenPGP for mail and files where that is already part of the workflow, and disk or volume encryption on hosts I operate. I do not publish a personal OpenPGP fingerprint on this site. Certificate and HTTPS work is covered on the TLS and ACME card.",
+          "related": [
+            "tls-acme",
+            "mail-servers",
+            "cybersecurity-hardening"
+          ],
+          "level": "Working"
         },
         {
           "slug": "email-deliverability",

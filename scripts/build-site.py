@@ -148,6 +148,7 @@ SIDEBAR_GROUPS = [
         "Resources & Contact",
         [
             ("/hire/", "Hire", "hire"),
+            ("/pricing/", "Pricing", "pricing"),
             ("/contact/", "Contact", "contact"),
             ("/search/", "Search", "search"),
             ("/resources/", "Resources", "resources"),
@@ -865,7 +866,7 @@ def _page_path_from(pth: Path) -> str:
 
 def apply_chrome_to_existing() -> None:
     theme_re = re.compile(r'<meta name="theme-color" content="[^"]*"(?: media="[^"]*")?>')
-    skip_dirs = {"skills", "capabilities", "business-it", "hire", "locations"}
+    skip_dirs = {"skills", "capabilities", "business-it", "hire", "locations", "pricing"}
     current_by_dir = {
         "resume": "resume",
         "about": "about",
@@ -881,6 +882,7 @@ def apply_chrome_to_existing() -> None:
         "status": "status",
         "hire": "hire",
         "locations": "locations",
+        "pricing": "pricing",
     }
     for pth in ROOT.rglob("*.html"):
         if ".git" in pth.parts:
@@ -903,7 +905,9 @@ def apply_chrome_to_existing() -> None:
         handle = "site" + "handle"
         text = text.replace("https://" + x_host + "/" + handle, "")
         text = text.replace("@" + handle, "")
-        text = theme_re.sub(theme_tags(), text, count=1)
+        # Replace every existing theme-color tag with a single light/dark pair.
+        text = theme_re.sub("", text)
+        text = text.replace("</title>", "</title>\n" + theme_tags(), 1)
         if text != orig:
             pth.write_text(text, encoding="utf-8")
             print("chrome", rel)
@@ -1427,6 +1431,43 @@ def patch_favicon_cachebust() -> None:
     print("favicon cache-bust", changed)
 
 
+
+def build_pricing() -> None:
+    main = """  <header class="page-hero">
+    <p class="eyebrow"><a href="/">Home</a> / Pricing</p>
+    <h1>Pricing</h1>
+    <p>Work is quoted in writing before it starts. I do not publish a single figure that covers every job, because the scope, risk and time differ. The bands below describe how I price work. For a figure that applies to your brief, request a quote.</p>
+  </header>
+  <section class="section">
+    <div class="blocks">
+      <article class="block">
+        <h2>Fixed-scope projects</h2>
+        <p>A written scope, a quoted fee, and a clear hand-over. This is the usual shape for a build, a migration, or a defined piece of software or infrastructure work. The fee is agreed before work begins. Changes to the scope are written down and quoted separately.</p>
+      </article>
+      <article class="block">
+        <h2>Hourly consulting</h2>
+        <p>Short advisory work, reviews, or overflow help that does not fit a fixed scope. Time is agreed in advance where I can, and billed against the hours actually used, with a written summary of the work.</p>
+      </article>
+      <article class="block">
+        <h2>Business IT</h2>
+        <p>Remote support, email and domains, servers, backups and hardening for organisations in Australia. New work is scoped and quoted for that engagement. Ongoing support, if we agree it, is also written down rather than left open-ended.</p>
+      </article>
+    </div>
+    <h2>Request a quote</h2>
+    <p class="sub">Use the hire form for a fixed-scope or Business IT brief, or the contact page for a shorter question. I will come back with a written quote or a clear request for the detail I still need. Nothing here is a standing offer at a published rate.</p>
+    <p class="section-links"><a class="btn" href="/hire/">Request a quote</a> <a class="btn btn-ghost" href="/contact/">Contact</a> <a class="btn btn-ghost" href="/business-it/">Business IT</a> <a class="btn btn-ghost" href="/services/">Services</a></p>
+  </section>"""
+    title = "Pricing — Fixed-scope, consulting and Business IT — Rohan Kells"
+    desc = "How Rohan Kells prices work in Australia: written fixed-scope quotes, hourly consulting, and Business IT engagements. Request a quote for a figure that applies to your brief."
+    canon = f"{SITE}/pricing/"
+    ld = [
+        person_ld(),
+        {"@type": "WebPage", "@id": canon, "url": canon, "name": title, "description": desc, "isPartOf": {"@id": f"{SITE}/#site"}},
+        {"@type": "ProfessionalService", "name": "Rohan Kells", "description": desc, "provider": {"@id": f"{SITE}/#person"}, "areaServed": "Australia", "url": canon},
+    ]
+    write(ROOT / "pricing" / "index.html", page(title, desc, canon, "pricing", main, ld))
+
+
 def main() -> None:
     data = load_catalog()
     reset_skills_tree()
@@ -1439,6 +1480,7 @@ def main() -> None:
     build_business_it()
     build_remote_support(data)
     build_locations()
+    build_pricing()
     build_hire()
     apply_chrome_to_existing()
     patch_home_and_resume()
