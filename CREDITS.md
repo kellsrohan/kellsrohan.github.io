@@ -4,7 +4,7 @@ Updated 26 Nov 2026 (AEDT).
 
 ## Photo
 
-- Portrait of Rohan Kells on the homepage and About page: /assets/photos/rohan-kells.jpg. Photograph supplied by Rohan Kells.
+- Portrait of Rohan Kells on the homepage and About page: /assets/photos/kellsrohan.png. Photograph supplied by Rohan Kells.
 - Earlier USDA / Flickr files under /assets/photos/hero-*.webp and /assets/photos/og.jpg remain on disk from a previous version of the site and are not used on the current pages.
 
 ## Fonts
